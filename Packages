@@ -14,8 +14,8 @@ SHA512: 5c291aae165a3e496b888013b8e8d8a682ce438f860358b9bbac5a460bf8a61b0d37415e
 Description: Make your battery colourful!
 Name: Eliza
 Author: WilsontheWolf
-Depiction: https://wilsonserver.hopto.org/repo/depictions/web/com.wilsonthewolf.eliza
-SileoDepiction: https://wilsonserver.hopto.org/repo/depictions/sileo/com.wilsonthewolf.eliza
+Depiction: https://wilson.antti.codes/repo/depictions/web/com.wilsonthewolf.eliza
+SileoDepiction: https://wilson.antti.codes/repo/depictions/sileo/com.wilsonthewolf.eliza
 
 Package: com.wilsonthewolf.eliza
 Architecture: iphoneos-arm
@@ -33,8 +33,8 @@ SHA512: 1ea4b314e0d7989df39aeb11db15577ab22cf1ba87f54000c46f8b9314a7f39d36c6d80b
 Description: Make your battery colourful!
 Name: Eliza
 Author: WilsontheWolf
-Depiction: https://wilsonserver.hopto.org/repo/depictions/web/com.wilsonthewolf.eliza
-SileoDepiction: https://wilsonserver.hopto.org/repo/depictions/sileo/com.wilsonthewolf.eliza
+Depiction: https://wilson.antti.codes/repo/depictions/web/com.wilsonthewolf.eliza
+SileoDepiction: https://wilson.antti.codes/repo/depictions/sileo/com.wilsonthewolf.eliza
 
 Package: com.wilsonthewolf.webshade
 Architecture: iphoneos-arm
@@ -52,8 +52,8 @@ SHA512: 4b372b1db3a8ef0b259c544ac3096ea05ffe592abf557c9078229ad6455de44488e2fd5a
 Description: Make your websites dark!
 Name: WebShade
 Author: WilsontheWolf
-Depiction: https://wilsonserver.hopto.org/repo/depictions/web/com.wilsonthewolf.webshade
-SileoDepiction: https://wilsonserver.hopto.org/repo/depictions/sileo/com.wilsonthewolf.webshade
+Depiction: https://wilson.antti.codes/repo/depictions/web/com.wilsonthewolf.webshade
+SileoDepiction: https://wilson.antti.codes/repo/depictions/sileo/com.wilsonthewolf.webshade
 
 Package: com.wilsonthewolf.webshade
 Architecture: iphoneos-arm
@@ -71,5 +71,5 @@ SHA512: a90ffee53c8682d6d0edf3fd73a911bcb50da9a2c07adf78a4d36cce00e6dd5aaf5c1940
 Description: Make your websites dark!
 Name: WebShade
 Author: WilsontheWolf
-Depiction: https://wilsonserver.hopto.org/repo/depictions/web/com.wilsonthewolf.webshade
-SileoDepiction: https://wilsonserver.hopto.org/repo/depictions/sileo/com.wilsonthewolf.webshade
+Depiction: https://wilson.antti.codes/repo/depictions/web/com.wilsonthewolf.webshade
+SileoDepiction: https://wilson.antti.codes/repo/depictions/sileo/com.wilsonthewolf.webshade
