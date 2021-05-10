@@ -1,0 +1,25 @@
+{
+    "name": "WebShade",
+    "tagline": "Make your websites dark!",
+    "desc": "WebShade makes your websites dark mode.",
+    "screenshots": [
+        {
+            "name": "google.png",
+            "accessibilityText": "Google in dark mode."
+        },
+        {
+            "name": "wiki.png",
+            "accessibilityText": "Wikipedia in dark mode."
+        }
+    ],
+    "changelog": [
+        {
+            "version": "0.0.2",
+            "changes": "- Prevent Cydia Background Crashes\n- Fix Spotlight Dictionary Glitches (Thanks to @Minh-Ton)"
+        },
+        {
+            "version": "0.0.1",
+            "changes": "- Initial Release"
+        }
+    ]
+}

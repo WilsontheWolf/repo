@@ -1,0 +1,5 @@
+.DS_Store
+apt-ftparchive
+build
+node_modules
+buildPackages

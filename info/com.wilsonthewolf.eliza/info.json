@@ -1,0 +1,21 @@
+{
+    "name": "Eliza",
+    "tagline": "Make your battery colourful!",
+    "desc": "Eliza makes your battery colour represent how full it is.",
+    "screenshots": [
+        {
+            "name": "battery.png",
+            "accessibilityText": "An image of the battery at different levels."
+        }
+    ],
+    "changelog": [
+        {
+            "version": "0.0.2",
+            "changes": "- Better coloured battery icons. (Special thanks to @strafe on GitHub)\n- Added Preferences!\n  - Enable/Disable the tweak.\n  - Option to use the original low power mode colour\n  - Option to use the original charging colour"
+        },
+        {
+            "version": "0.0.1",
+            "changes": "- Initial Release"
+        }
+    ]
+}

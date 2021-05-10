@@ -1,0 +1,20 @@
+body {
+    text-align: center;
+    background-color: #121212;
+    color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+a {
+    color: #3dc6f0;
+}
+
+@media screen and (prefers-color-scheme: light) {
+    body {
+        background-color: white;
+        color: black;
+    }
+    a {
+        color: #22a8d1;
+    }
+}

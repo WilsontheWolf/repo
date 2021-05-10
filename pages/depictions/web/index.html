@@ -1,0 +1,8 @@
+<!DOCTYPE html>
+<!-- This is a legacy page for old depictions. -->
+<script>
+    const params = new URLSearchParams(window.location.search);
+    const p = params.get('p');
+    if(!p) window.location.replace('%base%');
+    else window.location.replace(`%base%depictions/web/${p}`)
+</script>
