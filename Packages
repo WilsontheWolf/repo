@@ -1,0 +1,75 @@
+Package: com.wilsonthewolf.eliza
+Architecture: iphoneos-arm
+Version: 0.0.1
+Section: Tweaks
+Maintainer: WilsontheWolf
+Installed-Size: 280
+Depends: mobilesubstrate (>= 0.9.5000)
+Filename: ./debs/com.wilsonthewolf.eliza_0.0.1_iphoneos-arm.deb
+Size: 4152
+MD5sum: c81c61d066eb4fcf9878b0ff7c8ec95c
+SHA1: afb2ae66a1e02cfb73deacfee5b6449e2001f8a3
+SHA256: c20255a055333edb952625ff299130ab3967b4eca2f7dc9ee95dede28b667fda
+SHA512: 5c291aae165a3e496b888013b8e8d8a682ce438f860358b9bbac5a460bf8a61b0d37415e90b9024d5c2cd5a4a8c95e51d620727f71b7853e77c6b122d9fad041
+Description: Make your battery colourful!
+Name: Eliza
+Author: WilsontheWolf
+Depiction: https://wilsonserver.hopto.org/repo/depictions/web/com.wilsonthewolf.eliza
+SileoDepiction: https://wilsonserver.hopto.org/repo/depictions/sileo/com.wilsonthewolf.eliza
+
+Package: com.wilsonthewolf.eliza
+Architecture: iphoneos-arm
+Version: 0.0.2
+Section: Tweaks
+Maintainer: WilsontheWolf
+Installed-Size: 312
+Depends: mobilesubstrate (>= 0.9.5000), preferenceloader, firmware(>=12.0)
+Filename: ./debs/com.wilsonthewolf.eliza_0.0.2_iphoneos-arm.deb
+Size: 7270
+MD5sum: 90218f32f473965ddbdf06abc8cff9dd
+SHA1: aca76fe745173a70bd8905730fbb9fa5a9fadd2f
+SHA256: 6fc4e3b9d4b79b77def6af426cf1fa3d1be9f1915e86ccf0e1684c3fc438bf0f
+SHA512: 1ea4b314e0d7989df39aeb11db15577ab22cf1ba87f54000c46f8b9314a7f39d36c6d80b11eee2f6e0f581b93514aac968c2ec5114c72d7f6d86e76fabe0d64d
+Description: Make your battery colourful!
+Name: Eliza
+Author: WilsontheWolf
+Depiction: https://wilsonserver.hopto.org/repo/depictions/web/com.wilsonthewolf.eliza
+SileoDepiction: https://wilsonserver.hopto.org/repo/depictions/sileo/com.wilsonthewolf.eliza
+
+Package: com.wilsonthewolf.webshade
+Architecture: iphoneos-arm
+Version: 0.0.1
+Section: Tweaks
+Maintainer: WilsontheWolf
+Installed-Size: 280
+Depends: mobilesubstrate (>= 0.9.5000)
+Filename: ./debs/com.wilsonthewolf.webshade_0.0.1_iphoneos-arm.deb
+Size: 24468
+MD5sum: 4b4283c9dc65077a3f68104984a56d39
+SHA1: 1f80c8799dc26c46c54309eb77b47b8ed353db33
+SHA256: 173093281dc0f3523ece7a6fd45b74ae86f1b272bf889d4ba9f2ecaa16652355
+SHA512: 4b372b1db3a8ef0b259c544ac3096ea05ffe592abf557c9078229ad6455de44488e2fd5ace92299a3dca9dabb83e2df20f39ce347f295e9d0959049c45190094
+Description: Make your websites dark!
+Name: WebShade
+Author: WilsontheWolf
+Depiction: https://wilsonserver.hopto.org/repo/depictions/web/com.wilsonthewolf.webshade
+SileoDepiction: https://wilsonserver.hopto.org/repo/depictions/sileo/com.wilsonthewolf.webshade
+
+Package: com.wilsonthewolf.webshade
+Architecture: iphoneos-arm
+Version: 0.0.2
+Section: Tweaks
+Maintainer: WilsontheWolf
+Installed-Size: 280
+Depends: mobilesubstrate (>= 0.9.5000)
+Filename: ./debs/com.wilsonthewolf.webshade_0.0.2_iphoneos-arm.deb
+Size: 24626
+MD5sum: 87d79d2af3eb478596c7d7ea39e6f002
+SHA1: e1176f7e106d74929c0c211a46934170d4fe239c
+SHA256: 30f9648634b94226d3673495fbf6edf307f4ea2cbeb583305cabe1b335c4ebd3
+SHA512: a90ffee53c8682d6d0edf3fd73a911bcb50da9a2c07adf78a4d36cce00e6dd5aaf5c1940cb81841280a1acbc6bcbc59542c187345561718dcb24864d6d845650
+Description: Make your websites dark!
+Name: WebShade
+Author: WilsontheWolf
+Depiction: https://wilsonserver.hopto.org/repo/depictions/web/com.wilsonthewolf.webshade
+SileoDepiction: https://wilsonserver.hopto.org/repo/depictions/sileo/com.wilsonthewolf.webshade

@@ -1,0 +1,37 @@
+Architectures: iphoneos-arm
+Codename: idk
+Components: main
+Date: Mon, 10 May 2021 20:52:44 +0000
+Description: WilsontheWolf's repo for his tweaks.
+Label: WilsontheWolf's Repo
+Origin: WilsontheWolf's Repo
+Suite: stable
+Version: 1.0
+MD5Sum:
+ 314f7c3f3b678e07f71c97ade352e327             3278 Packages
+ 485f74463d5fcda544a333b23332b605             1237 Packages.bz2
+ 4aedad906553a467069e06e1d588ac2c             1125 Packages.gz
+ eb96d34ea24f3852c6eabe618b306709             1136 Packages.xz
+ 9d5d33e5afdbb630127b232c725ebd4b             1078 Packages.zst
+ 8952fd8c83235abe994c5eb5a0ef4403              231 Release
+SHA1:
+ 244b014d66cc0e15d43bf319ca8d4950b4616e0b             3278 Packages
+ b1c51f4a95e30d73fe21b1a71df2ff99ffa78292             1237 Packages.bz2
+ 88e328dd96b233a151d0f127face3d495e8bc33c             1125 Packages.gz
+ f6a44b80e4018593ca19c48a426a44ad48339293             1136 Packages.xz
+ f124e640101c1338f5dd418ba37aa885625c9f95             1078 Packages.zst
+ bef160c49e13a9ea1fffd2ca62c09a1eeb592edc              231 Release
+SHA256:
+ ade8878cea408857b8538b9f77e60a7dfbd33d34c0a9eeccd0e2abf4e9507e1c             3278 Packages
+ d518b89eee0c1d3c433a634f3c81b718cc61d13392b6680a5678d469a887d399             1237 Packages.bz2
+ 06432c3a2005c07bd2487e4d972ac06bd143657a58888cb50e5ba82b9d58f7d1             1125 Packages.gz
+ e0a30e009e405544d9ab8b852590227580a035fae66e146c2abbc1e2dbfce4e3             1136 Packages.xz
+ b31784e8b390f6d43626808cfb1875a3e1994704b3d61c900ca870398b33d41e             1078 Packages.zst
+ 3e55cfeeb3c1e45b19d5f6cacc26cc01e8d712528d7ac2c366254c468159514c              231 Release
+SHA512:
+ 3900f096b7fb99f3ba61dddfe07d5ab8bc8dffa171e498bc2c4a0da5333305a075ee9524a88e56fb2742e8d8328ce826c50ca68ca5d4d896e3d34cb2d44fd7d7             3278 Packages
+ 2bdf16fe8d2a91b37217d619700da72f54af9e17fcaaf1aa83345efe797e847f6e16dd24e5d2d38caae1f7579c078cb78fa7f95e0b9e33768b5a2bd0dfe7148c             1237 Packages.bz2
+ 18c6f5a553ddf4e251cd53c013066d981defe9d255ffa3b5e7608a9c9903408cec261e0c141a5f7c4b29d58c4c9020d3cb73144d4381eec129f2325086950b93             1125 Packages.gz
+ 15f348be7467d7dffaff22db42a3dee85e03d6f333d73200e058cdebca6dc532474a5b610528d0179aa093738a3d0835c18bb78982eabfc4dda0f5fe424f5b9c             1136 Packages.xz
+ 618ae99fcc3909627e9223517320cd264e85b8922ea5b229dc3e37498a703b66c177115aa8feb3643481c4efdd83e01ef581cbe0c0959b64ab1ef99c90a0ad3f             1078 Packages.zst
+ ac69bfde7914793fdff5637736ecef4be4ee5b284f14f8b3452a9c3704a472bb6461f116dcabdbdc4669736a293f47c27894622d97d7953715d67c0d9355ae10              231 Release
