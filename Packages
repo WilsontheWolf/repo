@@ -73,3 +73,22 @@ Name: WebShade
 Author: WilsontheWolf
 Depiction: https://wilson.antti.codes/repo/depictions/web/com.wilsonthewolf.webshade
 SileoDepiction: https://wilson.antti.codes/repo/depictions/sileo/com.wilsonthewolf.webshade
+
+Package: me.krit.notdoxed
+Architecture: iphoneos-arm
+Version: 1.1
+Section: Tweaks
+Maintainer: WilsontheWolf
+Installed-Size: 184
+Depends: mobilesubstrate (>= 0.9.5000)
+Filename: ./debs/me.krit.notdoxed_1.1_iphoneos-arm.deb
+Size: 3546
+MD5sum: 0bc18cf9d38957bc36f75eb1928be101
+SHA1: fab323995bb42dfdc988c8450095d424fbd0c778
+SHA256: 772edbbecfb70b5f78ffa9b7658ee72c723b38bae8de6934b97e4e292911f43e
+SHA512: c14bc375f386a5c487f984fee3503d6c37516e647cdb1be75ac9d3f6f616b0ad9b5566cf154bde1684d34e456023e4b7267f93931d5b2fa06ff45807ed902e49
+Description: Hide personal info in common apps.
+Name: NotDoxed
+Author: krit
+Depiction: https://wilson.antti.codes/repo/depictions/web/me.krit.notdoxed
+SileoDepiction: https://wilson.antti.codes/repo/depictions/sileo/me.krit.notdoxed
