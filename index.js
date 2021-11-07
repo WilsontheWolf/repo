@@ -22,38 +22,97 @@ const processFiles = async (dir, to) => {
             await processFiles(path.join(dir, file), path.join(to, file));
         }
     }
-}
-(async () => {
+};
+
+const setup = async () => {
     console.log('Building site.');
-    await fs.rmdir('./build', {
-        recursive: true
-    });
+
+    // Clearing Folders
+    await fs.rm('./build', { recursive: true }).catch(() => { });
     await fs.mkdir('./build');
+
+    await fs.rm('./buildPackages', { recursive: true }).catch(() => { });
+    await fs.mkdir('./buildPackages');
+
+    await fs.mkdir('./build/debs');
+
+    // Processing Files
     await processFiles('./pages', './build');
+
+    await fs.mkdir('./build/depictions/sileo');
+    await fs.mkdir('./build/depictions/screenshots');
+
     console.log('Processing debs.');
-    await fs.rmdir('./buildPackages', {
+
+    await exec('./scripts/processPackages.sh');
+};
+
+let sDepictions = new Set();
+const processPackageFiles = async (output, package) => {
+    output = await output;
+
+    package.set('Filename', package.get('Filename').replace(/^\.\.\/debs\/(.+)$/, './debs/$1'));
+    package.set('Depiction', `${config.url}depictions/web/${package.get('Package')}`);
+    package.set('SileoDepiction', `${config.url}depictions/sileo/${package.get('Package')}`);
+    package.forEach((v, k) => {
+        output.push(`${k}: ${v}`);
+    });
+    // Ensures proper formatting 
+    output.push('');
+
+    if (!sDepictions.has(package.get('Package'))) {
+        let tweak;
+        try {
+            tweak = JSON.parse(await fs.readFile(`./info/${package.get('Package')}/info.json`));
+        } catch (e) {
+            tweak = {
+                name: package.get('Name') || package.get('Package'),
+                desc: package.get('Description'),
+            };
+        }
+
+        const id = package.get('Package');
+        const d = makeSileoDepiction(tweak, id);
+
+        await fs.writeFile(`./build/depictions/sileo/${id}`, JSON.stringify(d));
+        if (tweak.screenshots?.length) {
+            await fs.mkdir(`./build/depictions/screenshots/${id}`);
+            await processFiles(`./info/${id}/screenshots`, `./build/depictions/screenshots/${id}`);
+        }
+        const res = new Kennel(d).render();
+        await fs.writeFile(`./build/depictions/web/${id}.html`, makeHTMLDepiction(tweak, res));
+
+        sDepictions.add(package.get('Package'));
+    }
+
+    return output;
+};
+
+(async () => {
+    await setup();
+
+    console.log('Processing package data.');
+
+    let packages = parser((await fs.readFile('./buildPackages/Packages')).toString(), { multi: true });
+
+    const packageFile = (await packages.reduce(processPackageFiles, [])).join('\n');
+
+    await fs.writeFile('./build/Packages', packageFile);
+    console.log('Making repo data.');
+    await fs.writeFile('./buildPackages/repo.conf', makeRepoConf());
+    await exec('./scripts/genRepo.sh');
+    await fs.rm('./buildPackages', {
         recursive: true
     });
-    await fs.mkdir('./buildPackages');
-    await exec('./scripts/processPackages.sh');
-    console.log('Processing package data.');
-    let packages = parser((await fs.readFile('./buildPackages/Packages')).toString(), { multi: true });
-    packages = packages.map(p => {
-        p.set('Filename', p.get('Filename').replace(/^\.\.\/debs\/(.+)$/, './debs/$1'));
-        p.set('Depiction', `${config.url}depictions/web/${p.get('Package')}`);
-        p.set('SileoDepiction', `${config.url}depictions/sileo/${p.get('Package')}`);
-        return p;
-    });
-    let newPackage = packages.map(p => {
-        let lines = [];
-        p.forEach((v, k) => {
-            lines.push(`${k}: ${v}`);
-        });
-        return lines.join('\n');
-    }).join('\n\n');
-    await fs.writeFile('./build/Packages', newPackage);
-    console.log('Making repo data.')
-    await fs.writeFile('./buildPackages/repo.conf', `APT {
+    console.log('Copying debs');
+    await processFiles('./debs', './build/debs');
+    console.log('Generating sileo depictions.');
+
+    console.log('Saving depictions.');
+    await fs.writeFile('./build/styles/kennel.css', await fs.readFile(require.resolve('@zenithdevs/kennel/dist/kennel.css')));
+})();
+
+const makeRepoConf = () => `APT {
 FTPArchive {
 Release {
 Origin "${config.name}";
@@ -67,113 +126,84 @@ Description "${config.desc}";
 };
 };
 };
-`);
-    await exec('./scripts/genRepo.sh');
-    await fs.rmdir('./buildPackages', {
-        recursive: true
-    });
-    console.log('Copying debs');
-    await fs.mkdir('./build/debs');
-    await processFiles(`./debs`, `./build/debs`);
-    console.log('Generating sileo depictions.');
-    let sDepictions = new Map();
-    for (let p of packages) {
-        if (sDepictions.has(p.get('Package'))) continue;
-        let tweak;
-        try {
-            tweak = JSON.parse(await fs.readFile(`./info/${p.get('Package')}/info.json`));
-        } catch (e) {
-            tweak = {
-                name: p.get('Name') || p.get('Package'),
-                desc: p.get('Description'),
-            }
-        }
-        sDepictions.set(p.get('Package'), {d: {
-            "minVersion": "0.1",
-            "tabs": [
+`;
+
+const makeSileoDepiction = (tweak, package) => ({
+    'minVersion': '0.1',
+    'tabs': [
+        {
+            'tabname': 'Details',
+            'views': [
                 {
-                    "tabname": "Details",
-                    "views": [
-                        {
-                            "class": "DepictionHeaderView",
-                            "title": tweak.name
-                        },
-                        tweak.tagline ? {
-                            "class": "DepictionSubheaderView",
-                            "title": tweak.tagline
-                        } : null,
-                        {
-                            "class": "DepictionSeparatorView"
-                        },
-                        {
-                            "class": "DepictionHeaderView",
-                            "title": "Description:"
-                        },
-                        {
-                            "class": "DepictionMarkdownView",
-                            "markdown": tweak.desc || 'No description available.'
-                        },
-                        tweak.screenshots?.length ? {
-                            "class": "DepictionScreenshotsView",
-                            "screenshots": tweak.screenshots.map(s => ({
-                                url: `${config.url}depictions/screenshots/${p.get('Package')}/${s.name}`,
-                                accessibilityText: s.accessibilityText,
-                                video: s.video ?? false
-                            })),
-                            "itemCornerRadius": 6,
-                            "itemSize": "{160, 275.41333333333336}"
-                        } : null,
-                        (tweak.changelog?.length ? [{
-                            "class": "DepictionHeaderView",
-                            "title": "Whats new?"
-                        },
-                        {
-                            "class": "DepictionSubheaderView",
-                            "title": `v${tweak.changelog[0].version}`
-                        },
-                        {
-                            "class": "DepictionMarkdownView",
-                            "markdown": tweak.changelog[0].changes || 'No changes reported.'
-                        }] : [])
-                    ].flat().filter(v => v),
-                    "class": "DepictionStackView"
+                    'class': 'DepictionHeaderView',
+                    'title': tweak.name
+                },
+                tweak.tagline ? {
+                    'class': 'DepictionSubheaderView',
+                    'title': tweak.tagline
+                } : null,
+                {
+                    'class': 'DepictionSeparatorView'
                 },
                 {
-                    "tabname": "Changelog",
-                    "views": [
-                        {
-                            "class": "DepictionHeaderView",
-                            "title": `${tweak.name} Changelog`
-                        },
-                        ...(tweak.changelog?.length ? tweak.changelog.map(c => [{
-                            "class": "DepictionHeaderView",
-                            "title": `v${c.version}`
-                        },
-                        {
-                            "class": "DepictionMarkdownView",
-                            "markdown": c.changes || 'No changes reported.'
-                            }]) : [{
-                                "class": "DepictionSubheaderView",
-                                "title": `No changes found.`
-                            },])
-                    ].flat().filter(v => v),
-                    "class": "DepictionStackView"
-                }
-            ],
-            "class": "DepictionTabView"
-        }, info: tweak})
-    }
-    console.log('Saving depictions.');
-    await fs.mkdir('./build/depictions/sileo');
-    await fs.mkdir(`./build/depictions/screenshots`);
-    for (let [id, {d, info}] of sDepictions) {
-        await fs.writeFile(`./build/depictions/sileo/${id}`, JSON.stringify(d));
-        if (info.screenshots?.length) {
-            await fs.mkdir(`./build/depictions/screenshots/${id}`);
-            await processFiles(`./info/${id}/screenshots`, `./build/depictions/screenshots/${id}`);
+                    'class': 'DepictionHeaderView',
+                    'title': 'Description:'
+                },
+                {
+                    'class': 'DepictionMarkdownView',
+                    'markdown': tweak.desc || 'No description available.'
+                },
+                tweak.screenshots?.length ? {
+                    'class': 'DepictionScreenshotsView',
+                    'screenshots': tweak.screenshots.map(s => ({
+                        url: `${config.url}depictions/screenshots/${package}/${s.name}`,
+                        accessibilityText: s.accessibilityText,
+                        video: s.video ?? false
+                    })),
+                    'itemCornerRadius': 6,
+                    'itemSize': '{160, 275.41333333333336}'
+                } : null,
+                (tweak.changelog?.length ? [{
+                    'class': 'DepictionHeaderView',
+                    'title': 'Whats new?'
+                },
+                {
+                    'class': 'DepictionSubheaderView',
+                    'title': `v${tweak.changelog[0].version}`
+                },
+                {
+                    'class': 'DepictionMarkdownView',
+                    'markdown': tweak.changelog[0].changes || 'No changes reported.'
+                }] : [])
+            ].flat().filter(v => v),
+            'class': 'DepictionStackView'
+        },
+        {
+            'tabname': 'Changelog',
+            'views': [
+                {
+                    'class': 'DepictionHeaderView',
+                    'title': `${tweak.name} Changelog`
+                },
+                ...(tweak.changelog?.length ? tweak.changelog.map(c => [{
+                    'class': 'DepictionHeaderView',
+                    'title': `v${c.version}`
+                },
+                {
+                    'class': 'DepictionMarkdownView',
+                    'markdown': c.changes || 'No changes reported.'
+                }]) : [{
+                    'class': 'DepictionSubheaderView',
+                    'title': 'No changes found.'
+                },])
+            ].flat().filter(v => v),
+            'class': 'DepictionStackView'
         }
-        const res = new Kennel(d).render();
-        await fs.writeFile(`./build/depictions/web/${id}.html`, `<html lang="en">
+    ],
+    'class': 'DepictionTabView'
+});
+
+const makeHTMLDepiction = (info, res) => `<html lang="en">
     <head>
         <meta charset="utf8">
         <link rel="stylesheet" type="text/css" href="${config.base}styles/kennel.css">
@@ -202,7 +232,4 @@ Description "${config.desc}";
             }
         }
 </script>
-</html>`);  
-    }
-    await fs.writeFile(`./build/styles/kennel.css`, await fs.readFile(require.resolve('@zenithdevs/kennel/dist/kennel.css')))
-})();
+</html>`;
