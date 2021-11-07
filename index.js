@@ -28,10 +28,10 @@ const setup = async () => {
     console.log('Building site.');
 
     // Clearing Folders
-    await fs.rmdir('./build', {recursive: true}).catch(() => {});
+    await fs.rm('./build', { recursive: true }).catch(() => { });
     await fs.mkdir('./build');
 
-    await fs.rmdir('./buildPackages', {recursive: true}).catch(() => {});
+    await fs.rm('./buildPackages', { recursive: true }).catch(() => { });
     await fs.mkdir('./buildPackages');
 
     await fs.mkdir('./build/debs');
@@ -51,14 +51,16 @@ let sDepictions = new Set();
 const processPackageFiles = async (output, package) => {
     output = await output;
 
-    output.push(`Filename ${package.get('Filename').replace(/^\.\.\/debs\/(.+)$/, './debs/$1')}
-Depiction ${config.url}depictions/web/${package.get('Package')}
-SileoDepiction ${config.url}depictions/sileo/${package.get('Package')}`);
+    package.set('Filename', package.get('Filename').replace(/^\.\.\/debs\/(.+)$/, './debs/$1'));
+    package.set('Depiction', `${config.url}depictions/web/${package.get('Package')}`);
+    package.set('SileoDepiction', `${config.url}depictions/sileo/${package.get('Package')}`);
     package.forEach((v, k) => {
-        output.push(`${k}: ${v}\n`);
+        output.push(`${k}: ${v}`);
     });
+    // Ensures proper formatting 
+    output.push('');
 
-    if (!sDepictions.has(package.get('Package'))) {            
+    if (!sDepictions.has(package.get('Package'))) {
         let tweak;
         try {
             tweak = JSON.parse(await fs.readFile(`./info/${package.get('Package')}/info.json`));
@@ -70,16 +72,16 @@ SileoDepiction ${config.url}depictions/sileo/${package.get('Package')}`);
         }
 
         const id = package.get('Package');
-        const { info, d } = makeSileoDepiction(tweak, id);
+        const d = makeSileoDepiction(tweak, id);
 
         await fs.writeFile(`./build/depictions/sileo/${id}`, JSON.stringify(d));
-        if (info.screenshots?.length) {
+        if (tweak.screenshots?.length) {
             await fs.mkdir(`./build/depictions/screenshots/${id}`);
             await processFiles(`./info/${id}/screenshots`, `./build/depictions/screenshots/${id}`);
         }
         const res = new Kennel(d).render();
-        await fs.writeFile(`./build/depictions/web/${id}.html`, makeHTMLDepiction(info, res));  
-            
+        await fs.writeFile(`./build/depictions/web/${id}.html`, makeHTMLDepiction(tweak, res));
+
         sDepictions.add(package.get('Package'));
     }
 
@@ -99,7 +101,7 @@ SileoDepiction ${config.url}depictions/sileo/${package.get('Package')}`);
     console.log('Making repo data.');
     await fs.writeFile('./buildPackages/repo.conf', makeRepoConf());
     await exec('./scripts/genRepo.sh');
-    await fs.rmdir('./buildPackages', {
+    await fs.rm('./buildPackages', {
         recursive: true
     });
     console.log('Copying debs');
@@ -126,7 +128,7 @@ Description "${config.desc}";
 };
 `;
 
-const makeSileoDepiction = (tweak, package) => ({d: {
+const makeSileoDepiction = (tweak, package) => ({
     'minVersion': '0.1',
     'tabs': [
         {
@@ -199,7 +201,7 @@ const makeSileoDepiction = (tweak, package) => ({d: {
         }
     ],
     'class': 'DepictionTabView'
-}, info: tweak});
+});
 
 const makeHTMLDepiction = (info, res) => `<html lang="en">
     <head>
