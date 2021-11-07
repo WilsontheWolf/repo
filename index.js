@@ -4,7 +4,6 @@ const config = require('./config.json');
 const exec = require('util').promisify(require('child_process').exec);
 const parser = require('./controlParser');
 const Kennel = require('@zenithdevs/kennel');
-const { setgroups } = require('process');
 
 const processFiles = async (dir, to) => {
     const files = await fs.readdir(dir);
@@ -46,46 +45,46 @@ const setup = async () => {
     console.log('Processing debs.');
 
     await exec('./scripts/processPackages.sh');
-}
+};
 
 let sDepictions = new Set();
 const processPackageFiles = async (output, package) => {
-        output = await output;
+    output = await output;
 
-        output.push(`Filename ${package.get('Filename').replace(/^\.\.\/debs\/(.+)$/, './debs/$1')}
+    output.push(`Filename ${package.get('Filename').replace(/^\.\.\/debs\/(.+)$/, './debs/$1')}
 Depiction ${config.url}depictions/web/${package.get('Package')}
 SileoDepiction ${config.url}depictions/sileo/${package.get('Package')}`);
-        package.forEach((v, k) => {
-            output.push(`${k}: ${v}\n`);
-        });
+    package.forEach((v, k) => {
+        output.push(`${k}: ${v}\n`);
+    });
 
-        if (!sDepictions.has(package.get('Package'))) {            
-            let tweak;
-            try {
-                tweak = JSON.parse(await fs.readFile(`./info/${package.get('Package')}/info.json`));
-            } catch (e) {
-                tweak = {
-                    name: package.get('Name') || package.get('Package'),
-                    desc: package.get('Description'),
-                };
-            }
+    if (!sDepictions.has(package.get('Package'))) {            
+        let tweak;
+        try {
+            tweak = JSON.parse(await fs.readFile(`./info/${package.get('Package')}/info.json`));
+        } catch (e) {
+            tweak = {
+                name: package.get('Name') || package.get('Package'),
+                desc: package.get('Description'),
+            };
+        }
 
-            const id = package.get('Package');
-            const { info, d } = makeSileoDepiction(tweak, id);
+        const id = package.get('Package');
+        const { info, d } = makeSileoDepiction(tweak, id);
 
-            await fs.writeFile(`./build/depictions/sileo/${id}`, JSON.stringify(d));
-            if (info.screenshots?.length) {
-                await fs.mkdir(`./build/depictions/screenshots/${id}`);
-                await processFiles(`./info/${id}/screenshots`, `./build/depictions/screenshots/${id}`);
-            }
-            const res = new Kennel(d).render();
-            await fs.writeFile(`./build/depictions/web/${id}.html`, makeHTMLDepiction(info, res));  
+        await fs.writeFile(`./build/depictions/sileo/${id}`, JSON.stringify(d));
+        if (info.screenshots?.length) {
+            await fs.mkdir(`./build/depictions/screenshots/${id}`);
+            await processFiles(`./info/${id}/screenshots`, `./build/depictions/screenshots/${id}`);
+        }
+        const res = new Kennel(d).render();
+        await fs.writeFile(`./build/depictions/web/${id}.html`, makeHTMLDepiction(info, res));  
             
-            sDepictions.add(package.get('Package'));
-        };
-
-        return output;
+        sDepictions.add(package.get('Package'));
     }
+
+    return output;
+};
 
 (async () => {
     await setup();
@@ -128,79 +127,79 @@ Description "${config.desc}";
 `;
 
 const makeSileoDepiction = (tweak, package) => ({d: {
-            'minVersion': '0.1',
-            'tabs': [
+    'minVersion': '0.1',
+    'tabs': [
+        {
+            'tabname': 'Details',
+            'views': [
                 {
-                    'tabname': 'Details',
-                    'views': [
-                        {
-                            'class': 'DepictionHeaderView',
-                            'title': tweak.name
-                        },
-                        tweak.tagline ? {
-                            'class': 'DepictionSubheaderView',
-                            'title': tweak.tagline
-                        } : null,
-                        {
-                            'class': 'DepictionSeparatorView'
-                        },
-                        {
-                            'class': 'DepictionHeaderView',
-                            'title': 'Description:'
-                        },
-                        {
-                            'class': 'DepictionMarkdownView',
-                            'markdown': tweak.desc || 'No description available.'
-                        },
-                        tweak.screenshots?.length ? {
-                            'class': 'DepictionScreenshotsView',
-                            'screenshots': tweak.screenshots.map(s => ({
-                                url: `${config.url}depictions/screenshots/${package}/${s.name}`,
-                                accessibilityText: s.accessibilityText,
-                                video: s.video ?? false
-                            })),
-                            'itemCornerRadius': 6,
-                            'itemSize': '{160, 275.41333333333336}'
-                        } : null,
-                        (tweak.changelog?.length ? [{
-                            'class': 'DepictionHeaderView',
-                            'title': 'Whats new?'
-                        },
-                        {
-                            'class': 'DepictionSubheaderView',
-                            'title': `v${tweak.changelog[0].version}`
-                        },
-                        {
-                            'class': 'DepictionMarkdownView',
-                            'markdown': tweak.changelog[0].changes || 'No changes reported.'
-                        }] : [])
-                    ].flat().filter(v => v),
-                    'class': 'DepictionStackView'
+                    'class': 'DepictionHeaderView',
+                    'title': tweak.name
+                },
+                tweak.tagline ? {
+                    'class': 'DepictionSubheaderView',
+                    'title': tweak.tagline
+                } : null,
+                {
+                    'class': 'DepictionSeparatorView'
                 },
                 {
-                    'tabname': 'Changelog',
-                    'views': [
-                        {
-                            'class': 'DepictionHeaderView',
-                            'title': `${tweak.name} Changelog`
-                        },
-                        ...(tweak.changelog?.length ? tweak.changelog.map(c => [{
-                            'class': 'DepictionHeaderView',
-                            'title': `v${c.version}`
-                        },
-                        {
-                            'class': 'DepictionMarkdownView',
-                            'markdown': c.changes || 'No changes reported.'
-                        }]) : [{
-                            'class': 'DepictionSubheaderView',
-                            'title': 'No changes found.'
-                        },])
-                    ].flat().filter(v => v),
-                    'class': 'DepictionStackView'
-                }
-            ],
-            'class': 'DepictionTabView'
-        }, info: tweak})
+                    'class': 'DepictionHeaderView',
+                    'title': 'Description:'
+                },
+                {
+                    'class': 'DepictionMarkdownView',
+                    'markdown': tweak.desc || 'No description available.'
+                },
+                tweak.screenshots?.length ? {
+                    'class': 'DepictionScreenshotsView',
+                    'screenshots': tweak.screenshots.map(s => ({
+                        url: `${config.url}depictions/screenshots/${package}/${s.name}`,
+                        accessibilityText: s.accessibilityText,
+                        video: s.video ?? false
+                    })),
+                    'itemCornerRadius': 6,
+                    'itemSize': '{160, 275.41333333333336}'
+                } : null,
+                (tweak.changelog?.length ? [{
+                    'class': 'DepictionHeaderView',
+                    'title': 'Whats new?'
+                },
+                {
+                    'class': 'DepictionSubheaderView',
+                    'title': `v${tweak.changelog[0].version}`
+                },
+                {
+                    'class': 'DepictionMarkdownView',
+                    'markdown': tweak.changelog[0].changes || 'No changes reported.'
+                }] : [])
+            ].flat().filter(v => v),
+            'class': 'DepictionStackView'
+        },
+        {
+            'tabname': 'Changelog',
+            'views': [
+                {
+                    'class': 'DepictionHeaderView',
+                    'title': `${tweak.name} Changelog`
+                },
+                ...(tweak.changelog?.length ? tweak.changelog.map(c => [{
+                    'class': 'DepictionHeaderView',
+                    'title': `v${c.version}`
+                },
+                {
+                    'class': 'DepictionMarkdownView',
+                    'markdown': c.changes || 'No changes reported.'
+                }]) : [{
+                    'class': 'DepictionSubheaderView',
+                    'title': 'No changes found.'
+                },])
+            ].flat().filter(v => v),
+            'class': 'DepictionStackView'
+        }
+    ],
+    'class': 'DepictionTabView'
+}, info: tweak});
 
 const makeHTMLDepiction = (info, res) => `<html lang="en">
     <head>

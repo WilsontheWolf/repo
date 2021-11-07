@@ -10,8 +10,7 @@
         "predeploy": "yarn build"
     },
     "dependencies": {
-        "@zenithdevs/kennel": "ZenithDevs/Kennel",
-        "klaw": "^4.0.1"
+        "@zenithdevs/kennel": "ZenithDevs/Kennel"
     },
     "devDependencies": {
         "eslint": "^8.0.1",
