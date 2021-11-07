@@ -2,7 +2,7 @@ const fs = require('fs/promises');
 const path = require('path');
 const config = require('./config.json');
 const exec = require('util').promisify(require('child_process').exec);
-const parser = require('./controlParser');
+const parser = require('control-parser');
 const Kennel = require('@zenithdevs/kennel');
 
 const processFiles = async (dir, to) => {

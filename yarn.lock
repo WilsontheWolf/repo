@@ -158,6 +158,11 @@ concat-map@0.0.1:
   resolved "https://registry.yarnpkg.com/concat-map/-/concat-map-0.0.1.tgz#d8a96bd77fd68df7793a73036a3ba0d5405d477b"
   integrity sha1-2Klr13/Wjfd5OnMDajug1UBdR3s=
 
+control-parser@^1.0.1:
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/control-parser/-/control-parser-1.0.1.tgz#a25cd5536ebaba53180e0f688bb8a61741817897"
+  integrity sha512-ZB74u45omHyRgJtKwALCuxGfOfSFmc2bHKJqLx8V4PkTJhlJ/P002THR1IAP9EvdaoIrycoN+UUxRdaUeP1d1Q==
+
 cross-spawn@^7.0.2:
   version "7.0.3"
   resolved "https://registry.yarnpkg.com/cross-spawn/-/cross-spawn-7.0.3.tgz#f73a85b9d5d41d045551c177e2882d4ac85728a6"
