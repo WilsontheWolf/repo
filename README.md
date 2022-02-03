@@ -39,7 +39,7 @@ First clone the repo
 git clone https://github.com/WilsontheWolf/repo
 cd repo
 ```
-Afterwords all you have to do is run `./docker-build` to build.
+Afterwords all you have to do is run `./docker-build.sh` to build.
 This will handle all your dependencies and build the project for you.
 
 Afterwords continue onto [Setup the Repo](#setup-the-repo).
