@@ -7,8 +7,7 @@
     "scripts": {
         "build": "node .",
         "build:docker": "./docker-build.sh",
-        "deploy": "gh-pages -d build",
-        "predeploy": "yarn build"
+        "deploy": "gh-pages -d build"
     },
     "dependencies": {
         "@zenithdevs/kennel": "ZenithDevs/Kennel",
