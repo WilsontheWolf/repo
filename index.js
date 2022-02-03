@@ -64,6 +64,9 @@ const processPackageFiles = async (output, package) => {
         let tweak;
         try {
             tweak = JSON.parse(await fs.readFile(`./info/${package.get('Package')}/info.json`));
+            if (!tweak.name) tweak.name = package.get('Name') || package.get('Package');
+            if (!tweak.desc) tweak.desc = package.get('Description');
+
         } catch (e) {
             tweak = {
                 name: package.get('Name') || package.get('Package'),
