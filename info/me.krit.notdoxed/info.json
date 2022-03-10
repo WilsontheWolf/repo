@@ -2,6 +2,16 @@
     "name": "NotDoxed",
     "tagline": "By KritantaDev",
     "desc": "Hide personal info in common apps.\n\nThis tweak was originally made by KritantaDev. I am just hosting a modified copy, because the original was taken down from krit's repo.\n\nSee the original source code [here](https://github.com/KritantaDev/notdoxed) and my modified source code [here](https://github.com/WilsontheWolf/notdoxed).",
+    "links": [
+        {
+            "name": "Original Source Code",
+            "url": "https://github.com/KritantaDev/notdoxed"
+        },
+        {
+            "name": "Modified Source Code",
+            "url": "https://github.com/WilsontheWolf/notdoxed"
+        }
+    ],
     "screenshots": [
         {
             "name": "icloud.png",

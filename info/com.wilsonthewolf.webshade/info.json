@@ -2,6 +2,12 @@
     "name": "WebShade",
     "tagline": "Make your websites dark!",
     "desc": "WebShade makes your websites dark mode.",
+    "links": [
+        {
+            "name": "GitHub",
+            "url": "https://github.com/WilsontheWolf/WebShade"
+        }
+    ],
     "screenshots": [
         {
             "name": "google.png",

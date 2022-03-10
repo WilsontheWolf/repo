@@ -166,6 +166,14 @@ const makeSileoDepiction = (tweak, package) => ({
                     'itemCornerRadius': 6,
                     'itemSize': '{160, 275.41333333333336}'
                 } : null,
+                tweak.links?.filter(l => l.url && l.name)?.length ? [{
+                    'class': 'DepictionHeaderView',
+                    'title': 'Links:'
+                }, ...tweak.links.filter(l => l.url && l.name).map(l => ({
+                    class: 'DepictionTableButtonView',
+                    title: l.name,
+                    action: l.url
+                }))] : null,
                 (tweak.changelog?.length ? [{
                     'class': 'DepictionHeaderView',
                     'title': 'Whats new?'
@@ -177,7 +185,7 @@ const makeSileoDepiction = (tweak, package) => ({
                 {
                     'class': 'DepictionMarkdownView',
                     'markdown': tweak.changelog[0].changes || 'No changes reported.'
-                }] : [])
+                }] : []), 
             ].flat().filter(v => v),
             'class': 'DepictionStackView'
         },

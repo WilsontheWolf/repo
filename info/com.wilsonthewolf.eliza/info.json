@@ -2,6 +2,10 @@
     "name": "Eliza",
     "tagline": "Make your battery colourful!",
     "desc": "Eliza makes your battery colour represent how full it is.",
+    "links": [{
+        "name": "GitHub",
+        "url": "https://github.com/WilsontheWolf/Eliza"
+    }],
     "screenshots": [
         {
             "name": "battery.png",
