@@ -14,6 +14,10 @@
     ],
     "changelog": [
         {
+            "version": "0.0.3",
+            "changes": "- Per-website settings\n- WebShade Now tries to only run on websites and not other things (such as emails). Let me know if this doesn't work anywhere\n- iOS 12 and lower support \n- Changing brightness/contrast/grayscale/sepia\n- OLED Dark mode (by turning contrast to 200)\n- A new engine. This engine is a bit quicker and might work better on some sites, that don't like the old engine"
+        },
+        {
             "version": "0.0.2",
             "changes": "- Prevent Cydia Background Crashes\n- Fix Spotlight Dictionary Glitches (Thanks to @Minh-Ton)"
         },
