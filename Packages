@@ -93,6 +93,25 @@ Author: WilsontheWolf
 Depiction: https://wilson.antti.codes/repo/depictions/web/com.wilsonthewolf.webshade
 SileoDepiction: https://wilson.antti.codes/repo/depictions/sileo/com.wilsonthewolf.webshade
 
+Package: com.wilsonthewolf.webshade
+Architecture: iphoneos-arm
+Version: 0.0.4
+Section: Tweaks
+Maintainer: WilsontheWolf
+Installed-Size: 500
+Depends: mobilesubstrate (>= 0.9.5000), preferenceloader
+Filename: ./debs/com.wilsonthewolf.webshade_0.0.4_iphoneos-arm.deb
+Size: 49044
+MD5sum: 0d8ff0491e8b8f67ce2c76488b38f2e7
+SHA1: 628624cc28aafe9384ec621b6dc7c223e88ba767
+SHA256: 98cfc2b3cc645038cc6a2533422b1a7021e28ba9405a94409f279e91613f4d0d
+SHA512: e09ea0cbef4c01d4ee06581328d63d6023296e5cd539f7eb0d1ed85315a8b866bccae170c1d7cd90afd3f4e9f5d3b6de35e11878df7809fcb066dd41c31ff98f
+Description: Make your websites dark!
+Name: WebShade
+Author: WilsontheWolf
+Depiction: https://wilson.antti.codes/repo/depictions/web/com.wilsonthewolf.webshade
+SileoDepiction: https://wilson.antti.codes/repo/depictions/sileo/com.wilsonthewolf.webshade
+
 Package: me.krit.notdoxed
 Architecture: iphoneos-arm
 Version: 1.1
