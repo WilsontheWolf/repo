@@ -25,10 +25,12 @@
     "changelog": [
         {
             "version": "1.1",
+            "date": "November 2, 2021",
             "changes": "- Made iCloud screen say \"iCloud\" instead of being blank.\n- Changed some internal stuff so I could compile it."
         },
         {
             "version": "1.0",
+            "date": "December 10, 2020",
             "changes": "- Initial Release"
         }
     ]

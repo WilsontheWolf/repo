@@ -180,7 +180,7 @@ const makeSileoDepiction = (tweak, package) => ({
                 },
                 {
                     'class': 'DepictionSubheaderView',
-                    'title': `v${tweak.changelog[0].version}`
+                    'title': `v${tweak.changelog[0].version}${tweak.changelog[0].date ? ` - ${tweak.changelog[0].date}` : ''}`
                 },
                 {
                     'class': 'DepictionMarkdownView',
@@ -198,7 +198,7 @@ const makeSileoDepiction = (tweak, package) => ({
                 },
                 ...(tweak.changelog?.length ? tweak.changelog.map(c => [{
                     'class': 'DepictionHeaderView',
-                    'title': `v${c.version}`
+                    'title': `v${c.version} ${c.date ? ` - ${c.date}` : ''}`
                 },
                 {
                     'class': 'DepictionMarkdownView',

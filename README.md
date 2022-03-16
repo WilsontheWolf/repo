@@ -90,10 +90,12 @@ From here we can add values. Here is what a fully populated info looks like.
     "changelog": [
         {
             "version": "0.0.2",
+            "date": "March 10, 2022",
             "changes": "- The tweak is now 101% cooler."
         },
         {
             "version": "0.0.1",
+            "date": "March 5, 2022",
             "changes": "- Initial Release"
         }
     ]

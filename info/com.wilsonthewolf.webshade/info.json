@@ -20,15 +20,23 @@
     ],
     "changelog": [
         {
+            "version": "0.0.4",
+            "date": "March 16, 2022",
+            "changes": "- Major improvements to the advanced engine\n  - This uses a new feature called WebShade fetch to get around some site's configuration, that prevents WebShade from properly loading. If you don't want to use this feature you can disable it in the settings.\n- OLED Dark Mode Option\n  - Note: if you were setting contrast to 200 in a previous version to get OLED dark mode, please reset your sliders before using this.\n- Added the ability to have multiple matches per rule\n- Internal improvements and bug fixes"
+        },
+        {
             "version": "0.0.3",
-            "changes": "- Per-website settings\n- WebShade Now tries to only run on websites and not other things (such as emails). Let me know if this doesn't work anywhere\n- iOS 12 and lower support \n- Changing brightness/contrast/grayscale/sepia\n- OLED Dark mode (by turning contrast to 200)\n- A new engine. This engine is a bit quicker and might work better on some sites, that don't like the old engine"
+            "date": "March 10, 2022",
+            "changes": "- Settings\n  - Changing brightness/contrast/grayscale/sepia\n  - Per-website settings\n  - A new engine. This engine is a bit quicker and might work better on some sites, that don't like the old engine\n- WebShade Now tries to only run on websites and not other things (such as emails). Let me know if this doesn't work anywhere\n- iOS 12 and lower support"
         },
         {
             "version": "0.0.2",
+            "date": "March 22, 2021",
             "changes": "- Prevent Cydia Background Crashes\n- Fix Spotlight Dictionary Glitches (Thanks to @Minh-Ton)"
         },
         {
             "version": "0.0.1",
+            "date": "March 17, 2021",
             "changes": "- Initial Release"
         }
     ]

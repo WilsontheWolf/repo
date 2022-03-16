@@ -15,10 +15,12 @@
     "changelog": [
         {
             "version": "0.0.2",
+            "date": "November 17, 2020",
             "changes": "- Better coloured battery icons. (Special thanks to @strafe on GitHub)\n- Added Preferences!\n  - Enable/Disable the tweak.\n  - Option to use the original low power mode colour\n  - Option to use the original charging colour"
         },
         {
             "version": "0.0.1",
+            "date": "November 15, 2020",
             "changes": "- Initial Release"
         }
     ]
