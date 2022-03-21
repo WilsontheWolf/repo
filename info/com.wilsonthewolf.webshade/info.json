@@ -20,6 +20,11 @@
     ],
     "changelog": [
         {
+            "version": "0.0.5",
+            "date": "March 21, 2022",
+            "changes": "- Ability to dismiss the keyboard for the website match by pressing return\n- Made the website match case-insensitive\n- Added option for custom sites to use global settings as the defaults\n- Fixed OLED not applying on the per-site level\n- Ability to rename site rules"
+        },
+        {
             "version": "0.0.4",
             "date": "March 16, 2022",
             "changes": "- Major improvements to the advanced engine\n  - This uses a new feature called WebShade fetch to get around some site's configuration, that prevents WebShade from properly loading. If you don't want to use this feature you can disable it in the settings.\n- OLED Dark Mode Option\n  - Note: if you were setting contrast to 200 in a previous version to get OLED dark mode, please reset your sliders before using this.\n- Added the ability to have multiple matches per rule\n- Internal improvements and bug fixes"
