@@ -1,7 +1,7 @@
 {
     "name": "WebShade",
     "tagline": "Make your websites dark!",
-    "desc": "WebShade is a tweak that makes websites dark on all iOS browsers.\n\nWebshade has many options such as:\n- Per-site settings\n- OLED dark mode\n- Following the system theme\n- Changing the brightness, contrast, grayscale and sepia levels.",
+    "desc": "WebShade is a tweak that makes websites dark on all iOS browsers.\n\nWebshade has many options such as:\n- Per-site settings\n- OLED dark mode\n- Following the system theme\n- Changing the brightness, contrast, grayscale and sepia levels",
     "links": [
         {
             "name": "GitHub",
