@@ -1,0 +1,17 @@
+{
+    "name": "Unlocker",
+    "tagline": "Keep your device unlocked.",
+    "desc": "Unlocker prevents your device from locking when you shut the screen off.",
+    "links": [{
+        "name": "GitHub",
+        "url": "https://github.com/WilsontheWolf/Unlocker"
+    }],
+    "screenshots": [],
+    "changelog": [
+        {
+            "version": "0.0.1",
+            "date": "June 18, 2022",
+            "changes": "- Initial Release"
+        }
+    ]
+}
