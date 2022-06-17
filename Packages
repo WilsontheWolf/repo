@@ -36,6 +36,26 @@ Author: WilsontheWolf
 Depiction: https://wilson.antti.codes/repo/depictions/web/com.wilsonthewolf.eliza
 SileoDepiction: https://wilson.antti.codes/repo/depictions/sileo/com.wilsonthewolf.eliza
 
+Package: com.wilsonthewolf.unlocker
+Architecture: iphoneos-arm
+Version: 0.0.1
+Section: Tweaks
+Maintainer: WilsontheWolf
+Installed-Size: 324
+Depends: mobilesubstrate (>= 0.9.5000), preferenceloader (>= 2.2.3), com.opa334.ccsupport
+Filename: ./debs/com.wilsonthewolf.unlocker_0.0.1_iphoneos-arm.deb
+Size: 11614
+MD5sum: 59a7f96552e415027369a3fe2ec4854e
+SHA1: 42a20cd957e0e98d24274f3c3cfd1c0f5ee76061
+SHA256: e34721f10cba5867ec89712f17c4e70ead16d22473cf2b7bc7924d7c9e2c676e
+SHA512: b91a223825c9c83bbc83a6f1986d2d2a891701f2d93f560e1951261477d4e9e3d35a3a140518cfbfb850152a6ca5e295516ea7b52f063f9b266865b8a25f6c17
+Description: Keep your device unlocked.
+Name: Unlocker
+Author: WilsontheWolf
+Icon: file:///Library/ControlCenter/Bundles/UnlockerCC.bundle/SettingsIcon@3x.png
+Depiction: https://wilson.antti.codes/repo/depictions/web/com.wilsonthewolf.unlocker
+SileoDepiction: https://wilson.antti.codes/repo/depictions/sileo/com.wilsonthewolf.unlocker
+
 Package: com.wilsonthewolf.webshade
 Architecture: iphoneos-arm
 Version: 0.0.1
