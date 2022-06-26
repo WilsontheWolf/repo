@@ -36,6 +36,26 @@ Author: WilsontheWolf
 Depiction: https://wilson.antti.codes/repo/depictions/web/com.wilsonthewolf.eliza
 SileoDepiction: https://wilson.antti.codes/repo/depictions/sileo/com.wilsonthewolf.eliza
 
+Package: com.wilsonthewolf.timejump
+Architecture: iphoneos-arm
+Version: 0.0.1
+Section: Tweaks
+Maintainer: WilsontheWolf
+Installed-Size: 288
+Depends: mobilesubstrate (>= 0.9.5000), preferenceloader (>= 2.2.3)
+Filename: ./debs/com.wilsonthewolf.timejump_0.0.1_iphoneos-arm.deb
+Size: 10934
+MD5sum: 4ce73fee4011372b344b9a81242d93e0
+SHA1: 332dba102a4d4eb6aba7d233ec7f3532977b713d
+SHA256: 05c6f8cef4d795a0d9580750e88da0aaf1f44e890384ef00102b7719e2948563
+SHA512: 03777beb87aa1c15ae06012d30b6c68eaa8eb05246e7e6b5bb299c6b46da2f21228d7c037e48650fea061a9e91de5aa4042466708460fe43623db10e17b1e52b
+Description: An awesome MobileSubstrate tweak!
+Name: TimeJump
+Author: WilsontheWolf
+Icon: file:///Library/PreferenceBundles/TimeJumpPrefs.bundle/Icon@3x.png
+Depiction: https://wilson.antti.codes/repo/depictions/web/com.wilsonthewolf.timejump
+SileoDepiction: https://wilson.antti.codes/repo/depictions/sileo/com.wilsonthewolf.timejump
+
 Package: com.wilsonthewolf.unlocker
 Architecture: iphoneos-arm
 Version: 0.0.1
