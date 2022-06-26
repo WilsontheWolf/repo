@@ -3,6 +3,6 @@
 <script>
     const params = new URLSearchParams(window.location.search);
     const p = params.get('p');
-    if(!p) window.location.replace('/');
-    else window.location.replace(`/depictions/web/${p}`)
+    if(!p) window.location.replace('/repo/');
+    else window.location.replace(`/repo/depictions/web/${p}`)
 </script>
