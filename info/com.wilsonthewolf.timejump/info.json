@@ -1,0 +1,17 @@
+{
+    "name": "TimeJump",
+    "tagline": "Jump Time.",
+    "desc": "Makes your lockscreen clock jump ahead.",
+    "links": [{
+        "name": "GitHub",
+        "url": "https://github.com/WilsontheWolf/TimeJump"
+    }],
+    "screenshots": [],
+    "changelog": [
+        {
+            "version": "0.0.1",
+            "date": "June 25, 2022",
+            "changes": "- Initial Release"
+        }
+    ]
+}
