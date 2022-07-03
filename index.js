@@ -24,9 +24,36 @@ const processFiles = async (dir, to) => {
     }
 };
 
-const setup = async () => {
-    console.log('Building site.');
+let noWarnings = true;
+const warn = (msg) => {
+    console.warn(`[!] ${msg}`);
+    noWarnings = false;
+};
 
+const preflight = () => {
+    if (!config) throw new Error('No config file found.');
+    if (!config.name) warn('No name specified in config.json. This might cause issues.');
+    if (!config.desc) warn('No description specified in config.json. This might cause issues.');
+
+    if (!config.url) warn('No url specified in config.json. This might cause issues.');
+    else {
+        try {
+            const url = new URL(config.url);
+            if (!url.host) warn('Invalid url specified in config.json. This might cause issues.');
+            if (url.protocol !== 'https:' && url.protocol !== 'http:') warn('Invalid url protocol specified in config.json. This might cause issues.');
+        } catch (e) {
+            warn('Invalid url specified in config.json. This might cause issues.');
+        }
+    }
+    if (!config.base) warn('No base specified in config.json. This might cause issues.');
+    else {
+        if (!config.base.endsWith('/')) {
+            warn('Base specified in config.json does not end with "/". This might cause issues.');
+        }
+    }
+};
+
+const setup = async () => {
     // Clearing Folders
     await fs.rm('./build', { recursive: true }).catch(() => { });
     await fs.mkdir('./build');
@@ -41,8 +68,6 @@ const setup = async () => {
 
     await fs.mkdir('./build/depictions/sileo');
     await fs.mkdir('./build/depictions/screenshots');
-
-    console.log('Processing debs.');
 
     await exec('./scripts/processPackages.sh');
 };
@@ -68,6 +93,7 @@ const processPackageFiles = async (output, package) => {
             if (!tweak.desc) tweak.desc = package.get('Description');
 
         } catch (e) {
+            warn(`Could not load info.json for "${package.get('Name') || package.get('Package')}". Inferring from package data.`);
             tweak = {
                 name: package.get('Name') || package.get('Package'),
                 desc: package.get('Description'),
@@ -92,27 +118,32 @@ const processPackageFiles = async (output, package) => {
 };
 
 (async () => {
-    await setup();
+    preflight();
 
-    console.log('Processing package data.');
+    await setup();
 
     let packages = parser((await fs.readFile('./buildPackages/Packages')).toString(), { multi: true });
 
-    const packageFile = (await packages.reduce(processPackageFiles, [])).join('\n');
+    console.log(`Found ${packages.length} packages.`);
+
+    // The reverse is to cause the latest version of each package to be processed first.
+    const packageFile = (await packages.reverse().reduce(processPackageFiles, [])).join('\n');
 
     await fs.writeFile('./build/Packages', packageFile);
-    console.log('Making repo data.');
     await fs.writeFile('./buildPackages/repo.conf', makeRepoConf());
     await exec('./scripts/genRepo.sh');
     await fs.rm('./buildPackages', {
         recursive: true
     });
-    console.log('Copying debs');
     await processFiles('./debs', './build/debs');
-    console.log('Generating sileo depictions.');
 
-    console.log('Saving depictions.');
     await fs.writeFile('./build/styles/kennel.css', await fs.readFile(require.resolve('@zenithdevs/kennel/dist/kennel.css')));
+
+    if (noWarnings) {
+        console.log('Done successfully.');
+    } else {
+        warn('Done with warnings. Consider fixing them.');
+    }
 })();
 
 const makeRepoConf = () => `APT {
@@ -185,7 +216,7 @@ const makeSileoDepiction = (tweak, package) => ({
                 {
                     'class': 'DepictionMarkdownView',
                     'markdown': tweak.changelog[0].changes || 'No changes reported.'
-                }] : []), 
+                }] : []),
             ].flat().filter(v => v),
             'class': 'DepictionStackView'
         },

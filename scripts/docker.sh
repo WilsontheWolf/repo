@@ -1,6 +1,6 @@
 #! /bin/bash
 # Note: this script is ment to be run in the docker container.
-# To build with docker, run: yarn build:docker or ./scripts/docker-build.sh
+# To build with docker, run: yarn build:docker or ./docker-build.sh
 
 # check if folder exists
 if [ ! -d "/app" ]; then

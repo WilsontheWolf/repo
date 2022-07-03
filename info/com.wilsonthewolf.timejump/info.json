@@ -9,6 +9,11 @@
     "screenshots": [],
     "changelog": [
         {
+            "version": "0.0.2",
+            "date": "July 3, 2022",
+            "changes": "- Fix bug where default offset is 0 seconds\n- Add support for older devices"
+        },
+        {
             "version": "0.0.1",
             "date": "June 25, 2022",
             "changes": "- Initial Release"
