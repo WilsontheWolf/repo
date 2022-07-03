@@ -1,151 +1,35 @@
-Package: com.wilsonthewolf.eliza
+Package: me.krit.notdoxed
 Architecture: iphoneos-arm
-Version: 0.0.1
+Version: 1.1
 Section: Tweaks
 Maintainer: WilsontheWolf
-Installed-Size: 280
+Installed-Size: 184
 Depends: mobilesubstrate (>= 0.9.5000)
-Filename: ./debs/com.wilsonthewolf.eliza_0.0.1_iphoneos-arm.deb
-Size: 4152
-MD5sum: c81c61d066eb4fcf9878b0ff7c8ec95c
-SHA1: afb2ae66a1e02cfb73deacfee5b6449e2001f8a3
-SHA256: c20255a055333edb952625ff299130ab3967b4eca2f7dc9ee95dede28b667fda
-SHA512: 5c291aae165a3e496b888013b8e8d8a682ce438f860358b9bbac5a460bf8a61b0d37415e90b9024d5c2cd5a4a8c95e51d620727f71b7853e77c6b122d9fad041
-Description: Make your battery colourful!
-Name: Eliza
-Author: WilsontheWolf
-Depiction: https://wilson.antti.codes/repo/depictions/web/com.wilsonthewolf.eliza
-SileoDepiction: https://wilson.antti.codes/repo/depictions/sileo/com.wilsonthewolf.eliza
-
-Package: com.wilsonthewolf.eliza
-Architecture: iphoneos-arm
-Version: 0.0.2
-Section: Tweaks
-Maintainer: WilsontheWolf
-Installed-Size: 312
-Depends: mobilesubstrate (>= 0.9.5000), preferenceloader, firmware(>=12.0)
-Filename: ./debs/com.wilsonthewolf.eliza_0.0.2_iphoneos-arm.deb
-Size: 7270
-MD5sum: 90218f32f473965ddbdf06abc8cff9dd
-SHA1: aca76fe745173a70bd8905730fbb9fa5a9fadd2f
-SHA256: 6fc4e3b9d4b79b77def6af426cf1fa3d1be9f1915e86ccf0e1684c3fc438bf0f
-SHA512: 1ea4b314e0d7989df39aeb11db15577ab22cf1ba87f54000c46f8b9314a7f39d36c6d80b11eee2f6e0f581b93514aac968c2ec5114c72d7f6d86e76fabe0d64d
-Description: Make your battery colourful!
-Name: Eliza
-Author: WilsontheWolf
-Depiction: https://wilson.antti.codes/repo/depictions/web/com.wilsonthewolf.eliza
-SileoDepiction: https://wilson.antti.codes/repo/depictions/sileo/com.wilsonthewolf.eliza
-
-Package: com.wilsonthewolf.timejump
-Architecture: iphoneos-arm
-Version: 0.0.1
-Section: Tweaks
-Maintainer: WilsontheWolf
-Installed-Size: 288
-Depends: mobilesubstrate (>= 0.9.5000), preferenceloader (>= 2.2.3)
-Filename: ./debs/com.wilsonthewolf.timejump_0.0.1_iphoneos-arm.deb
-Size: 10934
-MD5sum: 4ce73fee4011372b344b9a81242d93e0
-SHA1: 332dba102a4d4eb6aba7d233ec7f3532977b713d
-SHA256: 05c6f8cef4d795a0d9580750e88da0aaf1f44e890384ef00102b7719e2948563
-SHA512: 03777beb87aa1c15ae06012d30b6c68eaa8eb05246e7e6b5bb299c6b46da2f21228d7c037e48650fea061a9e91de5aa4042466708460fe43623db10e17b1e52b
-Description: An awesome MobileSubstrate tweak!
-Name: TimeJump
-Author: WilsontheWolf
-Icon: file:///Library/PreferenceBundles/TimeJumpPrefs.bundle/Icon@3x.png
-Depiction: https://wilson.antti.codes/repo/depictions/web/com.wilsonthewolf.timejump
-SileoDepiction: https://wilson.antti.codes/repo/depictions/sileo/com.wilsonthewolf.timejump
-
-Package: com.wilsonthewolf.unlocker
-Architecture: iphoneos-arm
-Version: 0.0.1
-Section: Tweaks
-Maintainer: WilsontheWolf
-Installed-Size: 324
-Depends: mobilesubstrate (>= 0.9.5000), preferenceloader (>= 2.2.3), com.opa334.ccsupport
-Filename: ./debs/com.wilsonthewolf.unlocker_0.0.1_iphoneos-arm.deb
-Size: 11614
-MD5sum: 59a7f96552e415027369a3fe2ec4854e
-SHA1: 42a20cd957e0e98d24274f3c3cfd1c0f5ee76061
-SHA256: e34721f10cba5867ec89712f17c4e70ead16d22473cf2b7bc7924d7c9e2c676e
-SHA512: b91a223825c9c83bbc83a6f1986d2d2a891701f2d93f560e1951261477d4e9e3d35a3a140518cfbfb850152a6ca5e295516ea7b52f063f9b266865b8a25f6c17
-Description: Keep your device unlocked.
-Name: Unlocker
-Author: WilsontheWolf
-Icon: file:///Library/ControlCenter/Bundles/UnlockerCC.bundle/SettingsIcon@3x.png
-Depiction: https://wilson.antti.codes/repo/depictions/web/com.wilsonthewolf.unlocker
-SileoDepiction: https://wilson.antti.codes/repo/depictions/sileo/com.wilsonthewolf.unlocker
+Filename: ./debs/me.krit.notdoxed_1.1_iphoneos-arm.deb
+Size: 3546
+MD5sum: 0bc18cf9d38957bc36f75eb1928be101
+SHA1: fab323995bb42dfdc988c8450095d424fbd0c778
+SHA256: 772edbbecfb70b5f78ffa9b7658ee72c723b38bae8de6934b97e4e292911f43e
+SHA512: c14bc375f386a5c487f984fee3503d6c37516e647cdb1be75ac9d3f6f616b0ad9b5566cf154bde1684d34e456023e4b7267f93931d5b2fa06ff45807ed902e49
+Description: Hide personal info in common apps.
+Name: NotDoxed
+Author: krit
+Depiction: https://wilson.antti.codes/repo/depictions/web/me.krit.notdoxed
+SileoDepiction: https://wilson.antti.codes/repo/depictions/sileo/me.krit.notdoxed
 
 Package: com.wilsonthewolf.webshade
 Architecture: iphoneos-arm
-Version: 0.0.1
+Version: 0.0.6
 Section: Tweaks
 Maintainer: WilsontheWolf
-Installed-Size: 280
-Depends: mobilesubstrate (>= 0.9.5000)
-Filename: ./debs/com.wilsonthewolf.webshade_0.0.1_iphoneos-arm.deb
-Size: 24468
-MD5sum: 4b4283c9dc65077a3f68104984a56d39
-SHA1: 1f80c8799dc26c46c54309eb77b47b8ed353db33
-SHA256: 173093281dc0f3523ece7a6fd45b74ae86f1b272bf889d4ba9f2ecaa16652355
-SHA512: 4b372b1db3a8ef0b259c544ac3096ea05ffe592abf557c9078229ad6455de44488e2fd5ace92299a3dca9dabb83e2df20f39ce347f295e9d0959049c45190094
-Description: Make your websites dark!
-Name: WebShade
-Author: WilsontheWolf
-Depiction: https://wilson.antti.codes/repo/depictions/web/com.wilsonthewolf.webshade
-SileoDepiction: https://wilson.antti.codes/repo/depictions/sileo/com.wilsonthewolf.webshade
-
-Package: com.wilsonthewolf.webshade
-Architecture: iphoneos-arm
-Version: 0.0.2
-Section: Tweaks
-Maintainer: WilsontheWolf
-Installed-Size: 280
-Depends: mobilesubstrate (>= 0.9.5000)
-Filename: ./debs/com.wilsonthewolf.webshade_0.0.2_iphoneos-arm.deb
-Size: 24626
-MD5sum: 87d79d2af3eb478596c7d7ea39e6f002
-SHA1: e1176f7e106d74929c0c211a46934170d4fe239c
-SHA256: 30f9648634b94226d3673495fbf6edf307f4ea2cbeb583305cabe1b335c4ebd3
-SHA512: a90ffee53c8682d6d0edf3fd73a911bcb50da9a2c07adf78a4d36cce00e6dd5aaf5c1940cb81841280a1acbc6bcbc59542c187345561718dcb24864d6d845650
-Description: Make your websites dark!
-Name: WebShade
-Author: WilsontheWolf
-Depiction: https://wilson.antti.codes/repo/depictions/web/com.wilsonthewolf.webshade
-SileoDepiction: https://wilson.antti.codes/repo/depictions/sileo/com.wilsonthewolf.webshade
-
-Package: com.wilsonthewolf.webshade
-Architecture: iphoneos-arm
-Version: 0.0.3
-Section: Tweaks
-Maintainer: WilsontheWolf
-Installed-Size: 464
-Depends: mobilesubstrate (>= 0.9.5000)
-Filename: ./debs/com.wilsonthewolf.webshade_0.0.3_iphoneos-arm.deb
-Size: 43068
-MD5sum: a925c0e493fbd105bf9c679533be4c0a
-SHA1: ea3f4a7690f0505dcaba1dfeec5ebc758c0a62ba
-SHA256: 10845fbf33ca0ba718bdd8c39bcad8fc7ef0d39c93ead771a34d545a3991f619
-SHA512: c8c9323c94ce560efb67225715e5d3fbf83a65817a21f14c965e2bbb4beeffa7a81ed6cae483d4866e7180849b9fe97f101ad28a4bd1da157e92023d6d671183
-Description: Make your websites dark!
-Name: WebShade
-Author: WilsontheWolf
-Depiction: https://wilson.antti.codes/repo/depictions/web/com.wilsonthewolf.webshade
-SileoDepiction: https://wilson.antti.codes/repo/depictions/sileo/com.wilsonthewolf.webshade
-
-Package: com.wilsonthewolf.webshade
-Architecture: iphoneos-arm
-Version: 0.0.4
-Section: Tweaks
-Maintainer: WilsontheWolf
-Installed-Size: 500
+Installed-Size: 504
 Depends: mobilesubstrate (>= 0.9.5000), preferenceloader
-Filename: ./debs/com.wilsonthewolf.webshade_0.0.4_iphoneos-arm.deb
-Size: 49044
-MD5sum: 0d8ff0491e8b8f67ce2c76488b38f2e7
-SHA1: 628624cc28aafe9384ec621b6dc7c223e88ba767
-SHA256: 98cfc2b3cc645038cc6a2533422b1a7021e28ba9405a94409f279e91613f4d0d
-SHA512: e09ea0cbef4c01d4ee06581328d63d6023296e5cd539f7eb0d1ed85315a8b866bccae170c1d7cd90afd3f4e9f5d3b6de35e11878df7809fcb066dd41c31ff98f
+Filename: ./debs/com.wilsonthewolf.webshade_0.0.6_iphoneos-arm.deb
+Size: 51872
+MD5sum: 0c2274a5aa52ee657a0a67556b4aeea2
+SHA1: 75682edf37e62b840b6313e135dbb4ef1572bc63
+SHA256: fb376fb64c6a0d7f13a7f13f27f6147926daf6fc5f919420c4074b013e1851dd
+SHA512: 62dff586d07d0bae4b39575daa46dd870efd6371b2e4434205e53603cdb6b35f501816497e47e90fee5c8154223a01f79ec406fbc391484fa2bb9c063342d1a9
 Description: Make your websites dark!
 Name: WebShade
 Author: WilsontheWolf
@@ -173,38 +57,174 @@ SileoDepiction: https://wilson.antti.codes/repo/depictions/sileo/com.wilsonthewo
 
 Package: com.wilsonthewolf.webshade
 Architecture: iphoneos-arm
-Version: 0.0.6
+Version: 0.0.4
 Section: Tweaks
 Maintainer: WilsontheWolf
-Installed-Size: 504
+Installed-Size: 500
 Depends: mobilesubstrate (>= 0.9.5000), preferenceloader
-Filename: ./debs/com.wilsonthewolf.webshade_0.0.6_iphoneos-arm.deb
-Size: 51872
-MD5sum: 0c2274a5aa52ee657a0a67556b4aeea2
-SHA1: 75682edf37e62b840b6313e135dbb4ef1572bc63
-SHA256: fb376fb64c6a0d7f13a7f13f27f6147926daf6fc5f919420c4074b013e1851dd
-SHA512: 62dff586d07d0bae4b39575daa46dd870efd6371b2e4434205e53603cdb6b35f501816497e47e90fee5c8154223a01f79ec406fbc391484fa2bb9c063342d1a9
+Filename: ./debs/com.wilsonthewolf.webshade_0.0.4_iphoneos-arm.deb
+Size: 49044
+MD5sum: 0d8ff0491e8b8f67ce2c76488b38f2e7
+SHA1: 628624cc28aafe9384ec621b6dc7c223e88ba767
+SHA256: 98cfc2b3cc645038cc6a2533422b1a7021e28ba9405a94409f279e91613f4d0d
+SHA512: e09ea0cbef4c01d4ee06581328d63d6023296e5cd539f7eb0d1ed85315a8b866bccae170c1d7cd90afd3f4e9f5d3b6de35e11878df7809fcb066dd41c31ff98f
 Description: Make your websites dark!
 Name: WebShade
 Author: WilsontheWolf
 Depiction: https://wilson.antti.codes/repo/depictions/web/com.wilsonthewolf.webshade
 SileoDepiction: https://wilson.antti.codes/repo/depictions/sileo/com.wilsonthewolf.webshade
 
-Package: me.krit.notdoxed
+Package: com.wilsonthewolf.webshade
 Architecture: iphoneos-arm
-Version: 1.1
+Version: 0.0.3
 Section: Tweaks
 Maintainer: WilsontheWolf
-Installed-Size: 184
+Installed-Size: 464
 Depends: mobilesubstrate (>= 0.9.5000)
-Filename: ./debs/me.krit.notdoxed_1.1_iphoneos-arm.deb
-Size: 3546
-MD5sum: 0bc18cf9d38957bc36f75eb1928be101
-SHA1: fab323995bb42dfdc988c8450095d424fbd0c778
-SHA256: 772edbbecfb70b5f78ffa9b7658ee72c723b38bae8de6934b97e4e292911f43e
-SHA512: c14bc375f386a5c487f984fee3503d6c37516e647cdb1be75ac9d3f6f616b0ad9b5566cf154bde1684d34e456023e4b7267f93931d5b2fa06ff45807ed902e49
-Description: Hide personal info in common apps.
-Name: NotDoxed
-Author: krit
-Depiction: https://wilson.antti.codes/repo/depictions/web/me.krit.notdoxed
-SileoDepiction: https://wilson.antti.codes/repo/depictions/sileo/me.krit.notdoxed
+Filename: ./debs/com.wilsonthewolf.webshade_0.0.3_iphoneos-arm.deb
+Size: 43068
+MD5sum: a925c0e493fbd105bf9c679533be4c0a
+SHA1: ea3f4a7690f0505dcaba1dfeec5ebc758c0a62ba
+SHA256: 10845fbf33ca0ba718bdd8c39bcad8fc7ef0d39c93ead771a34d545a3991f619
+SHA512: c8c9323c94ce560efb67225715e5d3fbf83a65817a21f14c965e2bbb4beeffa7a81ed6cae483d4866e7180849b9fe97f101ad28a4bd1da157e92023d6d671183
+Description: Make your websites dark!
+Name: WebShade
+Author: WilsontheWolf
+Depiction: https://wilson.antti.codes/repo/depictions/web/com.wilsonthewolf.webshade
+SileoDepiction: https://wilson.antti.codes/repo/depictions/sileo/com.wilsonthewolf.webshade
+
+Package: com.wilsonthewolf.webshade
+Architecture: iphoneos-arm
+Version: 0.0.2
+Section: Tweaks
+Maintainer: WilsontheWolf
+Installed-Size: 280
+Depends: mobilesubstrate (>= 0.9.5000)
+Filename: ./debs/com.wilsonthewolf.webshade_0.0.2_iphoneos-arm.deb
+Size: 24626
+MD5sum: 87d79d2af3eb478596c7d7ea39e6f002
+SHA1: e1176f7e106d74929c0c211a46934170d4fe239c
+SHA256: 30f9648634b94226d3673495fbf6edf307f4ea2cbeb583305cabe1b335c4ebd3
+SHA512: a90ffee53c8682d6d0edf3fd73a911bcb50da9a2c07adf78a4d36cce00e6dd5aaf5c1940cb81841280a1acbc6bcbc59542c187345561718dcb24864d6d845650
+Description: Make your websites dark!
+Name: WebShade
+Author: WilsontheWolf
+Depiction: https://wilson.antti.codes/repo/depictions/web/com.wilsonthewolf.webshade
+SileoDepiction: https://wilson.antti.codes/repo/depictions/sileo/com.wilsonthewolf.webshade
+
+Package: com.wilsonthewolf.webshade
+Architecture: iphoneos-arm
+Version: 0.0.1
+Section: Tweaks
+Maintainer: WilsontheWolf
+Installed-Size: 280
+Depends: mobilesubstrate (>= 0.9.5000)
+Filename: ./debs/com.wilsonthewolf.webshade_0.0.1_iphoneos-arm.deb
+Size: 24468
+MD5sum: 4b4283c9dc65077a3f68104984a56d39
+SHA1: 1f80c8799dc26c46c54309eb77b47b8ed353db33
+SHA256: 173093281dc0f3523ece7a6fd45b74ae86f1b272bf889d4ba9f2ecaa16652355
+SHA512: 4b372b1db3a8ef0b259c544ac3096ea05ffe592abf557c9078229ad6455de44488e2fd5ace92299a3dca9dabb83e2df20f39ce347f295e9d0959049c45190094
+Description: Make your websites dark!
+Name: WebShade
+Author: WilsontheWolf
+Depiction: https://wilson.antti.codes/repo/depictions/web/com.wilsonthewolf.webshade
+SileoDepiction: https://wilson.antti.codes/repo/depictions/sileo/com.wilsonthewolf.webshade
+
+Package: com.wilsonthewolf.unlocker
+Architecture: iphoneos-arm
+Version: 0.0.1
+Section: Tweaks
+Maintainer: WilsontheWolf
+Installed-Size: 324
+Depends: mobilesubstrate (>= 0.9.5000), preferenceloader (>= 2.2.3), com.opa334.ccsupport
+Filename: ./debs/com.wilsonthewolf.unlocker_0.0.1_iphoneos-arm.deb
+Size: 11614
+MD5sum: 59a7f96552e415027369a3fe2ec4854e
+SHA1: 42a20cd957e0e98d24274f3c3cfd1c0f5ee76061
+SHA256: e34721f10cba5867ec89712f17c4e70ead16d22473cf2b7bc7924d7c9e2c676e
+SHA512: b91a223825c9c83bbc83a6f1986d2d2a891701f2d93f560e1951261477d4e9e3d35a3a140518cfbfb850152a6ca5e295516ea7b52f063f9b266865b8a25f6c17
+Description: Keep your device unlocked.
+Name: Unlocker
+Author: WilsontheWolf
+Icon: file:///Library/ControlCenter/Bundles/UnlockerCC.bundle/SettingsIcon@3x.png
+Depiction: https://wilson.antti.codes/repo/depictions/web/com.wilsonthewolf.unlocker
+SileoDepiction: https://wilson.antti.codes/repo/depictions/sileo/com.wilsonthewolf.unlocker
+
+Package: com.wilsonthewolf.timejump
+Architecture: iphoneos-arm
+Version: 0.0.2
+Section: Tweaks
+Maintainer: WilsontheWolf
+Installed-Size: 544
+Depends: mobilesubstrate (>= 0.9.5000), preferenceloader (>= 2.2.3)
+Filename: ./debs/com.wilsonthewolf.timejump_0.0.2_iphoneos-arm.deb
+Size: 13824
+MD5sum: 4ef37e68fdb5cd9f9245cb8add3e7a10
+SHA1: 79661141bedc0d55571f110a49513d7379e121a3
+SHA256: e007b3be1341c29fa03cf433af695847756a9a73782bee845ec93d95ed2ae67c
+SHA512: e517d54a621557513a93affb3e3d45a4bf333e41c6a2be42399c45bf3750010dad745ff42713958d66d12b5a15d5832a69317c465511f24487f2847248938670
+Description: Jump Time.
+Name: TimeJump
+Author: WilsontheWolf
+Icon: file:///Library/PreferenceBundles/TimeJumpPrefs.bundle/Icon@3x.png
+Depiction: https://wilson.antti.codes/repo/depictions/web/com.wilsonthewolf.timejump
+SileoDepiction: https://wilson.antti.codes/repo/depictions/sileo/com.wilsonthewolf.timejump
+
+Package: com.wilsonthewolf.timejump
+Architecture: iphoneos-arm
+Version: 0.0.1
+Section: Tweaks
+Maintainer: WilsontheWolf
+Installed-Size: 288
+Depends: mobilesubstrate (>= 0.9.5000), preferenceloader (>= 2.2.3)
+Filename: ./debs/com.wilsonthewolf.timejump_0.0.1_iphoneos-arm.deb
+Size: 10934
+MD5sum: 4ce73fee4011372b344b9a81242d93e0
+SHA1: 332dba102a4d4eb6aba7d233ec7f3532977b713d
+SHA256: 05c6f8cef4d795a0d9580750e88da0aaf1f44e890384ef00102b7719e2948563
+SHA512: 03777beb87aa1c15ae06012d30b6c68eaa8eb05246e7e6b5bb299c6b46da2f21228d7c037e48650fea061a9e91de5aa4042466708460fe43623db10e17b1e52b
+Description: An awesome MobileSubstrate tweak!
+Name: TimeJump
+Author: WilsontheWolf
+Icon: file:///Library/PreferenceBundles/TimeJumpPrefs.bundle/Icon@3x.png
+Depiction: https://wilson.antti.codes/repo/depictions/web/com.wilsonthewolf.timejump
+SileoDepiction: https://wilson.antti.codes/repo/depictions/sileo/com.wilsonthewolf.timejump
+
+Package: com.wilsonthewolf.eliza
+Architecture: iphoneos-arm
+Version: 0.0.2
+Section: Tweaks
+Maintainer: WilsontheWolf
+Installed-Size: 312
+Depends: mobilesubstrate (>= 0.9.5000), preferenceloader, firmware(>=12.0)
+Filename: ./debs/com.wilsonthewolf.eliza_0.0.2_iphoneos-arm.deb
+Size: 7270
+MD5sum: 90218f32f473965ddbdf06abc8cff9dd
+SHA1: aca76fe745173a70bd8905730fbb9fa5a9fadd2f
+SHA256: 6fc4e3b9d4b79b77def6af426cf1fa3d1be9f1915e86ccf0e1684c3fc438bf0f
+SHA512: 1ea4b314e0d7989df39aeb11db15577ab22cf1ba87f54000c46f8b9314a7f39d36c6d80b11eee2f6e0f581b93514aac968c2ec5114c72d7f6d86e76fabe0d64d
+Description: Make your battery colourful!
+Name: Eliza
+Author: WilsontheWolf
+Depiction: https://wilson.antti.codes/repo/depictions/web/com.wilsonthewolf.eliza
+SileoDepiction: https://wilson.antti.codes/repo/depictions/sileo/com.wilsonthewolf.eliza
+
+Package: com.wilsonthewolf.eliza
+Architecture: iphoneos-arm
+Version: 0.0.1
+Section: Tweaks
+Maintainer: WilsontheWolf
+Installed-Size: 280
+Depends: mobilesubstrate (>= 0.9.5000)
+Filename: ./debs/com.wilsonthewolf.eliza_0.0.1_iphoneos-arm.deb
+Size: 4152
+MD5sum: c81c61d066eb4fcf9878b0ff7c8ec95c
+SHA1: afb2ae66a1e02cfb73deacfee5b6449e2001f8a3
+SHA256: c20255a055333edb952625ff299130ab3967b4eca2f7dc9ee95dede28b667fda
+SHA512: 5c291aae165a3e496b888013b8e8d8a682ce438f860358b9bbac5a460bf8a61b0d37415e90b9024d5c2cd5a4a8c95e51d620727f71b7853e77c6b122d9fad041
+Description: Make your battery colourful!
+Name: Eliza
+Author: WilsontheWolf
+Depiction: https://wilson.antti.codes/repo/depictions/web/com.wilsonthewolf.eliza
+SileoDepiction: https://wilson.antti.codes/repo/depictions/sileo/com.wilsonthewolf.eliza
