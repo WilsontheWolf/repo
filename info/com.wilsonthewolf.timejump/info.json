@@ -1,7 +1,7 @@
 {
     "name": "TimeJump",
-    "tagline": "Jump Time.",
-    "desc": "Makes your lockscreen clock jump ahead.",
+    "tagline": "Set your clock forward.",
+    "desc": "Set's your lockscreen clock ahead.\nThis helps keep you on time.",
     "links": [{
         "name": "GitHub",
         "url": "https://github.com/WilsontheWolf/TimeJump"
