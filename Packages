@@ -14,8 +14,8 @@ SHA512: c14bc375f386a5c487f984fee3503d6c37516e647cdb1be75ac9d3f6f616b0ad9b5566cf
 Description: Hide personal info in common apps.
 Name: NotDoxed
 Author: krit
-Depiction: https://wilson.antti.codes/repo/depictions/web/me.krit.notdoxed
-SileoDepiction: https://wilson.antti.codes/repo/depictions/sileo/me.krit.notdoxed
+Depiction: https://repo.shorty.systems/depictions/web/me.krit.notdoxed
+SileoDepiction: https://repo.shorty.systems/depictions/sileo/me.krit.notdoxed
 
 Package: com.wilsonthewolf.webshade
 Architecture: iphoneos-arm
@@ -33,8 +33,8 @@ SHA512: 62dff586d07d0bae4b39575daa46dd870efd6371b2e4434205e53603cdb6b35f50181649
 Description: Make your websites dark!
 Name: WebShade
 Author: WilsontheWolf
-Depiction: https://wilson.antti.codes/repo/depictions/web/com.wilsonthewolf.webshade
-SileoDepiction: https://wilson.antti.codes/repo/depictions/sileo/com.wilsonthewolf.webshade
+Depiction: https://repo.shorty.systems/depictions/web/com.wilsonthewolf.webshade
+SileoDepiction: https://repo.shorty.systems/depictions/sileo/com.wilsonthewolf.webshade
 
 Package: com.wilsonthewolf.webshade
 Architecture: iphoneos-arm
@@ -52,8 +52,8 @@ SHA512: a4c9029e29a252be7984d800f42cdb73ea8b76cafef7acce7f5979d9babe27c43ae5b785
 Description: Make your websites dark!
 Name: WebShade
 Author: WilsontheWolf
-Depiction: https://wilson.antti.codes/repo/depictions/web/com.wilsonthewolf.webshade
-SileoDepiction: https://wilson.antti.codes/repo/depictions/sileo/com.wilsonthewolf.webshade
+Depiction: https://repo.shorty.systems/depictions/web/com.wilsonthewolf.webshade
+SileoDepiction: https://repo.shorty.systems/depictions/sileo/com.wilsonthewolf.webshade
 
 Package: com.wilsonthewolf.webshade
 Architecture: iphoneos-arm
@@ -71,8 +71,8 @@ SHA512: e09ea0cbef4c01d4ee06581328d63d6023296e5cd539f7eb0d1ed85315a8b866bccae170
 Description: Make your websites dark!
 Name: WebShade
 Author: WilsontheWolf
-Depiction: https://wilson.antti.codes/repo/depictions/web/com.wilsonthewolf.webshade
-SileoDepiction: https://wilson.antti.codes/repo/depictions/sileo/com.wilsonthewolf.webshade
+Depiction: https://repo.shorty.systems/depictions/web/com.wilsonthewolf.webshade
+SileoDepiction: https://repo.shorty.systems/depictions/sileo/com.wilsonthewolf.webshade
 
 Package: com.wilsonthewolf.webshade
 Architecture: iphoneos-arm
@@ -90,8 +90,8 @@ SHA512: c8c9323c94ce560efb67225715e5d3fbf83a65817a21f14c965e2bbb4beeffa7a81ed6ca
 Description: Make your websites dark!
 Name: WebShade
 Author: WilsontheWolf
-Depiction: https://wilson.antti.codes/repo/depictions/web/com.wilsonthewolf.webshade
-SileoDepiction: https://wilson.antti.codes/repo/depictions/sileo/com.wilsonthewolf.webshade
+Depiction: https://repo.shorty.systems/depictions/web/com.wilsonthewolf.webshade
+SileoDepiction: https://repo.shorty.systems/depictions/sileo/com.wilsonthewolf.webshade
 
 Package: com.wilsonthewolf.webshade
 Architecture: iphoneos-arm
@@ -109,8 +109,8 @@ SHA512: a90ffee53c8682d6d0edf3fd73a911bcb50da9a2c07adf78a4d36cce00e6dd5aaf5c1940
 Description: Make your websites dark!
 Name: WebShade
 Author: WilsontheWolf
-Depiction: https://wilson.antti.codes/repo/depictions/web/com.wilsonthewolf.webshade
-SileoDepiction: https://wilson.antti.codes/repo/depictions/sileo/com.wilsonthewolf.webshade
+Depiction: https://repo.shorty.systems/depictions/web/com.wilsonthewolf.webshade
+SileoDepiction: https://repo.shorty.systems/depictions/sileo/com.wilsonthewolf.webshade
 
 Package: com.wilsonthewolf.webshade
 Architecture: iphoneos-arm
@@ -128,8 +128,8 @@ SHA512: 4b372b1db3a8ef0b259c544ac3096ea05ffe592abf557c9078229ad6455de44488e2fd5a
 Description: Make your websites dark!
 Name: WebShade
 Author: WilsontheWolf
-Depiction: https://wilson.antti.codes/repo/depictions/web/com.wilsonthewolf.webshade
-SileoDepiction: https://wilson.antti.codes/repo/depictions/sileo/com.wilsonthewolf.webshade
+Depiction: https://repo.shorty.systems/depictions/web/com.wilsonthewolf.webshade
+SileoDepiction: https://repo.shorty.systems/depictions/sileo/com.wilsonthewolf.webshade
 
 Package: com.wilsonthewolf.unlocker
 Architecture: iphoneos-arm
@@ -148,8 +148,8 @@ Description: Keep your device unlocked.
 Name: Unlocker
 Author: WilsontheWolf
 Icon: file:///Library/ControlCenter/Bundles/UnlockerCC.bundle/SettingsIcon@3x.png
-Depiction: https://wilson.antti.codes/repo/depictions/web/com.wilsonthewolf.unlocker
-SileoDepiction: https://wilson.antti.codes/repo/depictions/sileo/com.wilsonthewolf.unlocker
+Depiction: https://repo.shorty.systems/depictions/web/com.wilsonthewolf.unlocker
+SileoDepiction: https://repo.shorty.systems/depictions/sileo/com.wilsonthewolf.unlocker
 
 Package: com.wilsonthewolf.timejump
 Architecture: iphoneos-arm
@@ -168,8 +168,8 @@ Description: Jump Time.
 Name: TimeJump
 Author: WilsontheWolf
 Icon: file:///Library/PreferenceBundles/TimeJumpPrefs.bundle/Icon@3x.png
-Depiction: https://wilson.antti.codes/repo/depictions/web/com.wilsonthewolf.timejump
-SileoDepiction: https://wilson.antti.codes/repo/depictions/sileo/com.wilsonthewolf.timejump
+Depiction: https://repo.shorty.systems/depictions/web/com.wilsonthewolf.timejump
+SileoDepiction: https://repo.shorty.systems/depictions/sileo/com.wilsonthewolf.timejump
 
 Package: com.wilsonthewolf.timejump
 Architecture: iphoneos-arm
@@ -188,8 +188,8 @@ Description: An awesome MobileSubstrate tweak!
 Name: TimeJump
 Author: WilsontheWolf
 Icon: file:///Library/PreferenceBundles/TimeJumpPrefs.bundle/Icon@3x.png
-Depiction: https://wilson.antti.codes/repo/depictions/web/com.wilsonthewolf.timejump
-SileoDepiction: https://wilson.antti.codes/repo/depictions/sileo/com.wilsonthewolf.timejump
+Depiction: https://repo.shorty.systems/depictions/web/com.wilsonthewolf.timejump
+SileoDepiction: https://repo.shorty.systems/depictions/sileo/com.wilsonthewolf.timejump
 
 Package: com.wilsonthewolf.eliza
 Architecture: iphoneos-arm
@@ -207,8 +207,8 @@ SHA512: 1ea4b314e0d7989df39aeb11db15577ab22cf1ba87f54000c46f8b9314a7f39d36c6d80b
 Description: Make your battery colourful!
 Name: Eliza
 Author: WilsontheWolf
-Depiction: https://wilson.antti.codes/repo/depictions/web/com.wilsonthewolf.eliza
-SileoDepiction: https://wilson.antti.codes/repo/depictions/sileo/com.wilsonthewolf.eliza
+Depiction: https://repo.shorty.systems/depictions/web/com.wilsonthewolf.eliza
+SileoDepiction: https://repo.shorty.systems/depictions/sileo/com.wilsonthewolf.eliza
 
 Package: com.wilsonthewolf.eliza
 Architecture: iphoneos-arm
@@ -226,5 +226,5 @@ SHA512: 5c291aae165a3e496b888013b8e8d8a682ce438f860358b9bbac5a460bf8a61b0d37415e
 Description: Make your battery colourful!
 Name: Eliza
 Author: WilsontheWolf
-Depiction: https://wilson.antti.codes/repo/depictions/web/com.wilsonthewolf.eliza
-SileoDepiction: https://wilson.antti.codes/repo/depictions/sileo/com.wilsonthewolf.eliza
+Depiction: https://repo.shorty.systems/depictions/web/com.wilsonthewolf.eliza
+SileoDepiction: https://repo.shorty.systems/depictions/sileo/com.wilsonthewolf.eliza
