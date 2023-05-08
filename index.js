@@ -68,6 +68,7 @@ const setup = async () => {
 
     await fs.mkdir('./build/depictions/sileo');
     await fs.mkdir('./build/depictions/screenshots');
+    await fs.mkdir('./build/icons');
 
     await exec('./scripts/processPackages.sh');
 };
@@ -79,6 +80,10 @@ const processPackageFiles = async (output, package) => {
     package.set('Filename', package.get('Filename').replace(/^\.\.\/debs\/(.+)$/, './debs/$1'));
     package.set('Depiction', `${config.url}depictions/web/${package.get('Package')}`);
     package.set('SileoDepiction', `${config.url}depictions/sileo/${package.get('Package')}`);
+    if (await fs.stat(`./info/${package.get('Package')}/icon.png`).catch(() => false)) {
+        await fs.copyFile(`./info/${package.get('Package')}/icon.png`, `./build/icons/${package.get('Package')}.png`);
+        package.set('Icon', `${config.url}icons/${package.get('Package')}.png`);
+    }
     package.forEach((v, k) => {
         output.push(`${k}: ${v}`);
     });
@@ -179,6 +184,14 @@ const makeSileoDepiction = (tweak, package) => ({
                 {
                     'class': 'DepictionSeparatorView'
                 },
+                tweak.banner?.text ? {
+                    'class': 'DepictionLabelView',
+                    'text': tweak.banner.text,
+                    'textColor': tweak.banner.color,
+                    'fontWeight': 'bold',
+                    'alignment': 1,
+                    'fontSize': 18,
+                } : null,
                 {
                     'class': 'DepictionHeaderView',
                     'title': 'Description:'
