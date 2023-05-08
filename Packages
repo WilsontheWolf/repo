@@ -147,7 +147,7 @@ SHA512: b91a223825c9c83bbc83a6f1986d2d2a891701f2d93f560e1951261477d4e9e3d35a3a14
 Description: Keep your device unlocked.
 Name: Unlocker
 Author: WilsontheWolf
-Icon: file:///Library/ControlCenter/Bundles/UnlockerCC.bundle/SettingsIcon@3x.png
+Icon: https://repo.shorty.systems/icons/com.wilsonthewolf.unlocker.png
 Depiction: https://repo.shorty.systems/depictions/web/com.wilsonthewolf.unlocker
 SileoDepiction: https://repo.shorty.systems/depictions/sileo/com.wilsonthewolf.unlocker
 
@@ -167,7 +167,7 @@ SHA512: e517d54a621557513a93affb3e3d45a4bf333e41c6a2be42399c45bf3750010dad745ff4
 Description: Jump Time.
 Name: TimeJump
 Author: WilsontheWolf
-Icon: file:///Library/PreferenceBundles/TimeJumpPrefs.bundle/Icon@3x.png
+Icon: https://repo.shorty.systems/icons/com.wilsonthewolf.timejump.png
 Depiction: https://repo.shorty.systems/depictions/web/com.wilsonthewolf.timejump
 SileoDepiction: https://repo.shorty.systems/depictions/sileo/com.wilsonthewolf.timejump
 
@@ -187,7 +187,7 @@ SHA512: 03777beb87aa1c15ae06012d30b6c68eaa8eb05246e7e6b5bb299c6b46da2f21228d7c03
 Description: An awesome MobileSubstrate tweak!
 Name: TimeJump
 Author: WilsontheWolf
-Icon: file:///Library/PreferenceBundles/TimeJumpPrefs.bundle/Icon@3x.png
+Icon: https://repo.shorty.systems/icons/com.wilsonthewolf.timejump.png
 Depiction: https://repo.shorty.systems/depictions/web/com.wilsonthewolf.timejump
 SileoDepiction: https://repo.shorty.systems/depictions/sileo/com.wilsonthewolf.timejump
 
@@ -209,6 +209,7 @@ Name: Eliza
 Author: WilsontheWolf
 Depiction: https://repo.shorty.systems/depictions/web/com.wilsonthewolf.eliza
 SileoDepiction: https://repo.shorty.systems/depictions/sileo/com.wilsonthewolf.eliza
+Icon: https://repo.shorty.systems/icons/com.wilsonthewolf.eliza.png
 
 Package: com.wilsonthewolf.eliza
 Architecture: iphoneos-arm
@@ -228,3 +229,4 @@ Name: Eliza
 Author: WilsontheWolf
 Depiction: https://repo.shorty.systems/depictions/web/com.wilsonthewolf.eliza
 SileoDepiction: https://repo.shorty.systems/depictions/sileo/com.wilsonthewolf.eliza
+Icon: https://repo.shorty.systems/icons/com.wilsonthewolf.eliza.png
