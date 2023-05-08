@@ -81,6 +81,10 @@ From here we can add values. Here is what a fully populated info looks like.
     "name": "My Tweak",
     "tagline": "My cool tweak!",
     "desc": "This is my cool tweak. Its pretty cool!",
+    "banner": {
+        "text": "I am important read me!",
+        "color": "red"
+    },
     "screenshots": [
         {
             "name": "image.png",
@@ -109,5 +113,7 @@ The changelog should always have the newest version on top to prevent issues.
 Images need to be placed in a folder called `screenshots` in the folder with the info. 
 
 The description and changes in the changelog support markdown.
+
+Adding a file called `icon.png` in your tweak's info folder will add that icon to the tweak.
 
 After this is all setup you can rebuild your repo. It will be built with all your new packages.
