@@ -1,4 +1,42 @@
 Package: me.krit.notdoxed
+Architecture: iphoneos-arm64
+Version: 1.2
+Section: Tweaks
+Maintainer: WilsontheWolf
+Installed-Size: 168
+Depends: mobilesubstrate (>= 0.9.5000)
+Filename: ./debs/me.krit.notdoxed_1.2_iphoneos-arm64.deb
+Size: 3340
+MD5sum: 9c3376d9612bd047a5d7e26f6e7bb4fa
+SHA1: e20f021b529440ea1dc233c3c39f3c9653ebbcd5
+SHA256: 0116c989a9525d63fc75f1155843d2f93fb4b085a7ea93aa9671d067af03c0c2
+SHA512: dce45550f1c9f3a3b1acb1fc65872f932b24265cfc5b49da065923cae076de332d8f6f1ddba4d120849a76c76bac9d39b4fbeb5e2bda49f97ad9f30116cba5dc
+Description: Hide personal info in common apps.
+Name: NotDoxed
+Author: krit
+Depiction: https://repo.shorty.systems/depictions/web/me.krit.notdoxed
+SileoDepiction: https://repo.shorty.systems/depictions/sileo/me.krit.notdoxed
+
+Package: me.krit.notdoxed
+Architecture: iphoneos-arm
+Version: 1.2
+Section: Tweaks
+Maintainer: WilsontheWolf
+Installed-Size: 168
+Depends: mobilesubstrate (>= 0.9.5000)
+Filename: ./debs/me.krit.notdoxed_1.2_iphoneos-arm.deb
+Size: 3244
+MD5sum: 2cb5406556ce836f0431e6261cae95af
+SHA1: b9e3992e8f29f6ba30842719718b78ffe1bb88fb
+SHA256: cfd86bda3a7307a2444a58c7ae9fcf9c1c0e4f2f958e074f2b0b63c5f62d4ad4
+SHA512: c7175f0f4e03a6d27b37b8230ebea0b46462da5eab4db32fc5a2a47c9d87bc35ddb87daf798320672f1fea798d190063ba55ca7db02bf24b0cbad566788eaaab
+Description: Hide personal info in common apps.
+Name: NotDoxed
+Author: krit
+Depiction: https://repo.shorty.systems/depictions/web/me.krit.notdoxed
+SileoDepiction: https://repo.shorty.systems/depictions/sileo/me.krit.notdoxed
+
+Package: me.krit.notdoxed
 Architecture: iphoneos-arm
 Version: 1.1
 Section: Tweaks
@@ -132,6 +170,46 @@ Depiction: https://repo.shorty.systems/depictions/web/com.wilsonthewolf.webshade
 SileoDepiction: https://repo.shorty.systems/depictions/sileo/com.wilsonthewolf.webshade
 
 Package: com.wilsonthewolf.unlocker
+Architecture: iphoneos-arm64
+Version: 0.0.2
+Section: Tweaks
+Maintainer: WilsontheWolf
+Installed-Size: 348
+Depends: mobilesubstrate (>= 0.9.5000), preferenceloader (>= 2.2.3), com.opa334.ccsupport
+Filename: ./debs/com.wilsonthewolf.unlocker_0.0.2_iphoneos-arm64.deb
+Size: 11948
+MD5sum: 1164c4b648aa200f51220ca19988d92c
+SHA1: b04a55728064a393d6931ab5e547af2f91a53493
+SHA256: 6e1c705d95678f54509f25a41f194268fc8a018916c43b0a78f4532b7297b4d5
+SHA512: eaee9bca1359d7add266f2ece4831e0e255e154e6b97b45bab07310f0810cd39f6ac8faec97e6a77acf057664f4d49aaad8eb22656a9ffab76d00f13f7eba1d4
+Description: Keep your device unlocked.
+Name: Unlocker
+Author: WilsontheWolf
+Icon: https://repo.shorty.systems/icons/com.wilsonthewolf.unlocker.png
+Depiction: https://repo.shorty.systems/depictions/web/com.wilsonthewolf.unlocker
+SileoDepiction: https://repo.shorty.systems/depictions/sileo/com.wilsonthewolf.unlocker
+
+Package: com.wilsonthewolf.unlocker
+Architecture: iphoneos-arm
+Version: 0.0.2
+Section: Tweaks
+Maintainer: WilsontheWolf
+Installed-Size: 332
+Depends: mobilesubstrate (>= 0.9.5000), preferenceloader (>= 2.2.3), com.opa334.ccsupport
+Filename: ./debs/com.wilsonthewolf.unlocker_0.0.2_iphoneos-arm.deb
+Size: 11014
+MD5sum: bb51e29b136ddb3ff5f64820c30b1f29
+SHA1: 8c31c2cca8f897b2954e911022f548cf5f065a8c
+SHA256: 9b6316abb2f2ffbd84274f373d819ed1208b3ac72f1658b039fb761ca4028304
+SHA512: ed257ea384fe205081f9cdd3eeec4465b4e0651d50906ab7d634d47c0cf74ae2dc5b007bbe761f0eeec90846c97e616d4e5774487066d582914a79d349a2a1a2
+Description: Keep your device unlocked.
+Name: Unlocker
+Author: WilsontheWolf
+Icon: https://repo.shorty.systems/icons/com.wilsonthewolf.unlocker.png
+Depiction: https://repo.shorty.systems/depictions/web/com.wilsonthewolf.unlocker
+SileoDepiction: https://repo.shorty.systems/depictions/sileo/com.wilsonthewolf.unlocker
+
+Package: com.wilsonthewolf.unlocker
 Architecture: iphoneos-arm
 Version: 0.0.1
 Section: Tweaks
@@ -150,6 +228,46 @@ Author: WilsontheWolf
 Icon: https://repo.shorty.systems/icons/com.wilsonthewolf.unlocker.png
 Depiction: https://repo.shorty.systems/depictions/web/com.wilsonthewolf.unlocker
 SileoDepiction: https://repo.shorty.systems/depictions/sileo/com.wilsonthewolf.unlocker
+
+Package: com.wilsonthewolf.timejump
+Architecture: iphoneos-arm64
+Version: 0.0.3
+Section: Tweaks
+Maintainer: WilsontheWolf
+Installed-Size: 336
+Depends: mobilesubstrate (>= 0.9.5000), preferenceloader (>= 2.2.3)
+Filename: ./debs/com.wilsonthewolf.timejump_0.0.3_iphoneos-arm64.deb
+Size: 11270
+MD5sum: 68b4fa3c819a53a977322725ab4c9a94
+SHA1: 886dc05099e37ab93f7553c944d58d5bff1e57c6
+SHA256: 247a00e8cb3ac7e49e73ea13096dbaeeb6e642f8a09d35b96bfc75792688debc
+SHA512: e38123f649bdc93e4804758a1f20923b2fb3f92c08ee4b9a704da37db899489802192455d60f8d65695b858910c66658d1ba09a3f9eafe99ff33c72c13654aac
+Description: Jump Time.
+Name: TimeJump
+Author: WilsontheWolf
+Icon: https://repo.shorty.systems/icons/com.wilsonthewolf.timejump.png
+Depiction: https://repo.shorty.systems/depictions/web/com.wilsonthewolf.timejump
+SileoDepiction: https://repo.shorty.systems/depictions/sileo/com.wilsonthewolf.timejump
+
+Package: com.wilsonthewolf.timejump
+Architecture: iphoneos-arm
+Version: 0.0.3
+Section: Tweaks
+Maintainer: WilsontheWolf
+Installed-Size: 544
+Depends: mobilesubstrate (>= 0.9.5000), preferenceloader (>= 2.2.3)
+Filename: ./debs/com.wilsonthewolf.timejump_0.0.3_iphoneos-arm.deb
+Size: 13822
+MD5sum: c0d6e841c23730911ee915e48b6f5bb7
+SHA1: 1209bbad1ad7658ca41961ffeae8472d96c3198d
+SHA256: 23c412d2cd632d5c80198bcd53b7f810f9290dcb1822a35f3bdab1ef9c1db087
+SHA512: 1e85c13f6ba711e1846513395f85e3535c5517797a8059ccf978987d1399b59e45b315cff91e4f63d16c2f261e5ce2feb972cbdc3e969f4bc86c8600f88ce5ed
+Description: Jump Time.
+Name: TimeJump
+Author: WilsontheWolf
+Icon: https://repo.shorty.systems/icons/com.wilsonthewolf.timejump.png
+Depiction: https://repo.shorty.systems/depictions/web/com.wilsonthewolf.timejump
+SileoDepiction: https://repo.shorty.systems/depictions/sileo/com.wilsonthewolf.timejump
 
 Package: com.wilsonthewolf.timejump
 Architecture: iphoneos-arm
@@ -190,6 +308,46 @@ Author: WilsontheWolf
 Icon: https://repo.shorty.systems/icons/com.wilsonthewolf.timejump.png
 Depiction: https://repo.shorty.systems/depictions/web/com.wilsonthewolf.timejump
 SileoDepiction: https://repo.shorty.systems/depictions/sileo/com.wilsonthewolf.timejump
+
+Package: com.wilsonthewolf.eliza
+Architecture: iphoneos-arm64
+Version: 0.0.3
+Section: Tweaks
+Maintainer: WilsontheWolf
+Installed-Size: 324
+Depends: mobilesubstrate (>= 0.9.5000), preferenceloader, firmware(>=12.0)
+Filename: ./debs/com.wilsonthewolf.eliza_0.0.3_iphoneos-arm64.deb
+Size: 10602
+MD5sum: b5038232ada29b260277c48c9c99d2e7
+SHA1: 7f4edbbff5884ac609c38e628ca931438d35d5fe
+SHA256: 2def5122177c45f46d8057c09b27af3c3ca7664586cb3aab8a2b181bb7d52aa2
+SHA512: 8202bdf38c26c26cb7e12b1a591bfebbc351be38d429371038bedc8ebc999a88aaca62e7ddb528f1356b23b606157ab4b2398a1a2f83c855ac7f80c84d199ce0
+Description: Make your battery colourful!
+Name: Eliza
+Author: WilsontheWolf
+Icon: https://repo.shorty.systems/icons/com.wilsonthewolf.eliza.png
+Depiction: https://repo.shorty.systems/depictions/web/com.wilsonthewolf.eliza
+SileoDepiction: https://repo.shorty.systems/depictions/sileo/com.wilsonthewolf.eliza
+
+Package: com.wilsonthewolf.eliza
+Architecture: iphoneos-arm
+Version: 0.0.3
+Section: Tweaks
+Maintainer: WilsontheWolf
+Installed-Size: 292
+Depends: mobilesubstrate (>= 0.9.5000), preferenceloader, firmware(>=12.0)
+Filename: ./debs/com.wilsonthewolf.eliza_0.0.3_iphoneos-arm.deb
+Size: 9824
+MD5sum: f151633c7c4397be02f8ffb68208863a
+SHA1: 79cd56207d0caa21cd477395aa1c62a0a3723b74
+SHA256: a4a6749cce6047ffc1f3c740deb3b8c0ab323e7ffee0d53a3c3750727cf8d9a8
+SHA512: 019de0c3bb628ed10c891eb92fab23bb6b57eaa88384dc4926aa300d7a41749d3a1d6f575dea96aa43ee0bab03e4c1699a33bed591882f72600b05c09174bb3f
+Description: Make your battery colourful!
+Name: Eliza
+Author: WilsontheWolf
+Icon: https://repo.shorty.systems/icons/com.wilsonthewolf.eliza.png
+Depiction: https://repo.shorty.systems/depictions/web/com.wilsonthewolf.eliza
+SileoDepiction: https://repo.shorty.systems/depictions/sileo/com.wilsonthewolf.eliza
 
 Package: com.wilsonthewolf.eliza
 Architecture: iphoneos-arm
