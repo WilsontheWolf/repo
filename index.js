@@ -159,7 +159,7 @@ Label "${config.name}";
 Suite stable;
 Version 1.0;
 Codename idk;
-Architectures iphoneos-arm;
+Architectures "iphoneos-arm iphoneos-arm64";
 Components main;
 Description "${config.desc}";
 };

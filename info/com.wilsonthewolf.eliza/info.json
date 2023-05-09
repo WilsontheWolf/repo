@@ -10,9 +10,22 @@
         {
             "name": "battery.png",
             "accessibilityText": "An image of the battery at different levels."
+        },
+        {
+            "name": "hotspot.jpg",
+            "accessibilityText": "An image of the hotspot battery at different levels."
+        },
+        {
+            "name": "ring.jpg",
+            "accessibilityText": "An image of the widget battery at different levels."
         }
     ],
     "changelog": [
+        {
+            "version": "0.0.3",
+            "date": "May 9, 2023",
+            "changes": "- Rootless support\n- Now effects the batteries for personal hotspots in the settings app.\n-Now effects the iOS 14+ control center\n- New settings icon\n- Internal reworks"
+        },
         {
             "version": "0.0.2",
             "date": "November 17, 2020",

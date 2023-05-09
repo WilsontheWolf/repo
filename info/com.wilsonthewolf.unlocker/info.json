@@ -9,6 +9,11 @@
     "screenshots": [],
     "changelog": [
         {
+            "version": "0.0.2",
+            "date": "May 9, 2023",
+            "changes": "- Rootless support"
+        },
+        {
             "version": "0.0.1",
             "date": "June 18, 2022",
             "changes": "- Initial Release"

@@ -9,6 +9,11 @@
     "screenshots": [],
     "changelog": [
         {
+            "version": "0.0.3",
+            "date": "May 9, 2023",
+            "changes": "- Rootless support"
+        },
+        {
             "version": "0.0.2",
             "date": "July 3, 2022",
             "changes": "- Fix bug where default offset is 0 minutes\n- Add support for older devices"
