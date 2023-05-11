@@ -80,9 +80,12 @@ const processPackageFiles = async (output, package) => {
     package.set('Filename', package.get('Filename').replace(/^\.\.\/debs\/(.+)$/, './debs/$1'));
     package.set('Depiction', `${config.url}depictions/web/${package.get('Package')}`);
     package.set('SileoDepiction', `${config.url}depictions/sileo/${package.get('Package')}`);
+
+    let icon;
     if (await fs.stat(`./info/${package.get('Package')}/icon.png`).catch(() => false)) {
         await fs.copyFile(`./info/${package.get('Package')}/icon.png`, `./build/icons/${package.get('Package')}.png`);
-        package.set('Icon', `${config.url}icons/${package.get('Package')}.png`);
+        icon = `${config.url}icons/${package.get('Package')}.png`;
+        package.set('Icon', icon);
     }
     package.forEach((v, k) => {
         output.push(`${k}: ${v}`);
@@ -105,6 +108,7 @@ const processPackageFiles = async (output, package) => {
             };
         }
 
+        if (icon) tweak.icon = icon;
         const id = package.get('Package');
         const d = makeSileoDepiction(tweak, id);
 
@@ -263,11 +267,12 @@ const makeHTMLDepiction = (info, res) => `<html lang="en">
         <meta charset="utf8">
         <link rel="stylesheet" type="text/css" href="${config.base}styles/kennel.css">
         <title>${info.name}</title>
-        <link rel="icon" href="${config.base}CydiaIcon.png" type="image/png">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="icon" href="${info.icon ? info.icon : `${config.base}CydiaIcon.png` }" type="image/png">
         <meta property="og:title" content="${info.name}" />
         <meta property="og:site_name" content="${config.name}" />
         <meta property="og:description" content="${info.tagline || info.desc || 'A cool tweak.'}" />
-        <meta property="og:image" content="${config.base}CydiaIcon.png" />
+        ${info.icon ? `<meta property="og:image" content="${info.icon}" />` : `<meta property="og:image" content="${config.base}CydiaIcon.png" />`}
         <meta name="theme-color" content="#6264d3">
         <style>@media (prefers-color-scheme: dark) {html {background: #121212; color: white;}} body {margin: 0; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;}</style>
     </head>
