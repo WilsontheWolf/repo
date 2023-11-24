@@ -8,6 +8,11 @@
     }],
     "screenshots": [],
     "changelog": [
+		{
+            "version": "0.0.3",
+            "date": "November 23, 2023",
+            "changes": "- Improve the lock check on the CC module. Thanks to [@iCraze](https://twitter.com/iCrazeiOS).\n  - Now works if device is unlocked but on lock screen\n  - Now shows an error message instead of just trying to unlock the device."
+        },
         {
             "version": "0.0.2",
             "date": "May 9, 2023",
