@@ -171,6 +171,46 @@ SileoDepiction: https://repo.shorty.systems/depictions/sileo/com.wilsonthewolf.w
 
 Package: com.wilsonthewolf.unlocker
 Architecture: iphoneos-arm64
+Version: 0.0.3
+Section: Tweaks
+Maintainer: WilsontheWolf
+Installed-Size: 364
+Depends: mobilesubstrate (>= 0.9.5000), preferenceloader (>= 2.2.3), com.opa334.ccsupport
+Filename: ./debs/com.wilsonthewolf.unlocker_0.0.3_iphoneos-arm64.deb
+Size: 11422
+MD5sum: 10feeadf3332e45e574a994460e7a75a
+SHA1: bcc95e225042384209a2133aef76c62fe843d2f0
+SHA256: 84e8b582a37ccdc584a53ec5b708f912c573103ebf262774aa582ecec0e2b542
+SHA512: 987aff05af96f9e99c6965df7bb7cb8cfffa01f420f6559b850ffce3b05f14dece9b5a8ca2b7d3cdfdb606852f47153e5f5511cf391e5e02dcc5b9da0c5fcf20
+Description: Keep your device unlocked.
+Name: Unlocker
+Author: WilsontheWolf
+Icon: https://repo.shorty.systems/icons/com.wilsonthewolf.unlocker.png
+Depiction: https://repo.shorty.systems/depictions/web/com.wilsonthewolf.unlocker
+SileoDepiction: https://repo.shorty.systems/depictions/sileo/com.wilsonthewolf.unlocker
+
+Package: com.wilsonthewolf.unlocker
+Architecture: iphoneos-arm
+Version: 0.0.3
+Section: Tweaks
+Maintainer: WilsontheWolf
+Installed-Size: 332
+Depends: mobilesubstrate (>= 0.9.5000), preferenceloader (>= 2.2.3), com.opa334.ccsupport
+Filename: ./debs/com.wilsonthewolf.unlocker_0.0.3_iphoneos-arm.deb
+Size: 11656
+MD5sum: 18579548a12320622ac58f8e207f846f
+SHA1: 1958975c12807aa6ad452906a53e96de3d344c64
+SHA256: 99def6cc7613e3fb6ed67c9469b4cb4554ca3173032ac5ad57d44ecd2ab4e478
+SHA512: cf85b56629e87fc71d796f747c0d1d6b20329955442ae153a8be77cd7ab127efd5af34988817ac1ffd06ecc9caa113ea9d51a197738015a65b398f934f02b58b
+Description: Keep your device unlocked.
+Name: Unlocker
+Author: WilsontheWolf
+Icon: https://repo.shorty.systems/icons/com.wilsonthewolf.unlocker.png
+Depiction: https://repo.shorty.systems/depictions/web/com.wilsonthewolf.unlocker
+SileoDepiction: https://repo.shorty.systems/depictions/sileo/com.wilsonthewolf.unlocker
+
+Package: com.wilsonthewolf.unlocker
+Architecture: iphoneos-arm64
 Version: 0.0.2
 Section: Tweaks
 Maintainer: WilsontheWolf
