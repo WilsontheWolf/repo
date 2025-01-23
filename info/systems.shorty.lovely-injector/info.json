@@ -1,0 +1,20 @@
+{
+    "name": "Lovely",
+    "tagline": " A runtime lua injector for games built with LÖVE.",
+    "desc": "iOS port of [Lovely](https://github.com/ethangreen-dev/lovely-injector).\n\nSpecial Thanks to [Cameron](https://github.com/CRKatri) for writing the patch finder to work with app store balatro.",
+    "links": [{
+        "name": "GitHub",
+        "url": "https://github.com/WilsontheWolf/lovely-injector/tree/ios"
+    }, {
+        "name": "Upstream GitHub",
+        "url": "https://github.com/ethangreen-dev/lovely-injector"
+    }],
+    "screenshots": [],
+    "changelog": [
+        {
+            "version": "0.7.1",
+            "date": "January 22nd, 2025",
+            "changes": "- Initial iOS Release\n- Upstream Changelog: https://github.com/ethangreen-dev/lovely-injector/releases/tag/v0.7.1"
+        }
+    ]
+}
