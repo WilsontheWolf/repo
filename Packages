@@ -1,3 +1,43 @@
+Package: systems.shorty.lovely-injector
+Architecture: iphoneos-arm64
+Version: 0.7.1
+Section: Tweaks
+Maintainer: WilsontheWolf
+Installed-Size: 38952
+Depends: mobilesubstrate (>= 0.9.5000)
+Filename: ./debs/systems.shorty.lovely-injector-0.7.1-iphoneos-arm64.deb
+Size: 1935942
+MD5sum: 0ed3056e3a5fe080e0ad35a1dace9879
+SHA1: 19013c7d903ad5607d604444c38f8d0b1c70dbcb
+SHA256: 296c866d3d66d6e7621dc7280f08d3a433339b97df15d631b8a9be0fa9c40b1c
+SHA512: a369f86673ab0780d3e9f03a8bb9637115e332e51e49ecc34840d0924cab9bec5a7953784b106503049155d00f9ed3ff862f28b97d93e66b259cd9872d93cfac
+Description: A runtime lua injector for games built with LÖVE
+Name: Lovely Injector
+Author: WilsontheWolf, Metherul
+Icon: https://repo.shorty.systems/icons/systems.shorty.lovely-injector.png
+Depiction: https://repo.shorty.systems/depictions/web/systems.shorty.lovely-injector
+SileoDepiction: https://repo.shorty.systems/depictions/sileo/systems.shorty.lovely-injector
+
+Package: systems.shorty.lovely-injector
+Architecture: iphoneos-arm
+Version: 0.7.1
+Section: Tweaks
+Maintainer: WilsontheWolf
+Installed-Size: 38952
+Depends: mobilesubstrate (>= 0.9.5000)
+Filename: ./debs/systems.shorty.lovely-injector-0.7.1-iphoneos-arm.deb
+Size: 1937674
+MD5sum: b7c69f88addb9b2ce6714e8e741444d4
+SHA1: 25635dfa4d4d16f5e6be9b3561b3494d45a6c253
+SHA256: e419a55b4550d5a7a1ffd982b1b67afed2a4d3c1e65a6e2a4a51d468c19785ef
+SHA512: a9d60fff94a27825332cff027e31b2338d815e943ef9089ace4d3a6dfbb4e04c1bb2ff06543329ca1496fe0cded9c37beaab86bb2c04ad11e4383ebf0df0a270
+Description: A runtime lua injector for games built with LÖVE
+Name: Lovely Injector
+Author: WilsontheWolf, Metherul
+Icon: https://repo.shorty.systems/icons/systems.shorty.lovely-injector.png
+Depiction: https://repo.shorty.systems/depictions/web/systems.shorty.lovely-injector
+SileoDepiction: https://repo.shorty.systems/depictions/sileo/systems.shorty.lovely-injector
+
 Package: me.krit.notdoxed
 Architecture: iphoneos-arm64
 Version: 1.2
